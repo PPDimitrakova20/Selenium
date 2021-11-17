@@ -139,7 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="LevelOne.cpp" />
     <ClCompile Include="Selenium.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LevelOne.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

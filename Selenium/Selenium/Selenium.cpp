@@ -1,5 +1,6 @@
 #include <iostream>
 #include <conio.h> //_kbhit, _getch
+#include "LevelOne.h"
 
 using namespace std;
 
@@ -63,6 +64,8 @@ int main()
                     }
                 }
             }
+             TaskOne();
         }
+
     }
 }
