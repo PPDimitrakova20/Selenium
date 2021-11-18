@@ -1,65 +1,117 @@
-#include <conio.h> //_kbhit, _getch
+#include <conio.h> // _kbhit, _getch
 #include "LevelOne.h"
 
 using namespace std;
 
 int main()
 {
-    //Declarations of the menu options
+    // Declarations of the menu options
     string menuOptions[3] = { "Play", "Rules", "Exit" };
     int menuOptionsIndex = 0;
+    bool flag = 0;
 
-        //Menu outputs - the different options
-        for (int i = 0; i < 3; i++)
+        // Menu outputs - the different options
+    for (int i = 0; i < 3; i++)
+    {
+        if (menuOptionsIndex == i)
         {
-            if (menuOptionsIndex == i)
-            {
-                cout << "> " << menuOptions[i] << endl;
-            }
-            else
-            {
-                cout << "  " << menuOptions[i] << endl;
-            }
+            cout << "> " << menuOptions[i] << " <"<< endl;
         }
-
-        //Navigation system with W and S keys
-        while (true)
+        else
         {
-            if (_kbhit())
+            cout << "  " << menuOptions[i] << endl;
+        }
+    }
+
+    // Navigation system with W and S keys
+    while (true)
+    {
+        if (_kbhit())
+        {
+            system("cls");
+            
+            switch (_getch())
             {
-                switch (_getch())
-                {
-                case 'w': // With W the user can go up the options
+                // With W the user can go up the options
+                case 'w':
+
                     menuOptionsIndex--;
-                    if (menuOptionsIndex == -1) // This way we avoid the situation where it can go up forever
+                    // This way we avoid the situation where it can go up forever
+                    if (menuOptionsIndex == -1)
                     {
                         menuOptionsIndex = 2;
                     }
                     break;
-                case 's': // With S the user can go down the options
+
+                // With S the user can go down the options
+                case 's':
+
                     menuOptionsIndex++;
-                    if (menuOptionsIndex == 3) // This way we avoid the situation where it can go down   forever
+                    // This way we avoid the situation where it can go down forever
+                    if (menuOptionsIndex == 3)
                     {
                         menuOptionsIndex = 0;
                     }
                     break;
-                }
-                
-                system("cls");
 
-                for (int i = 0; i < 3; i++) // Menu output changes after the certain option is selected
+                // If the user presses Enter
+                case 13:
+
+                    flag = 1;
+                    break;
+
+                // If the user presses Escape to go back 
+                case 27:
+
+                    flag = 0;
+                    break;
+            }
+
+            // Menu output changes after the certain option is selected
+            // This way we avoid the menu showing up when the user has already picked an option
+            if (!flag)
+            {
+                for (int i = 0; i < 3; i++)
                 {
                     if (menuOptionsIndex == i)
                     {
-                        cout << "> " << menuOptions[menuOptionsIndex] << endl;
+                        cout << "> " << menuOptions[menuOptionsIndex] << " <" << endl;
                     }
                     else
                     {
-                        cout << "  " << menuOptions[i] << endl;
+                        cout << "  " << menuOptions[i] << "  " << endl;
                     }
+
                 }
             }
-            // TaskOne();
+            else
+            {
+                // If the user is on one of the options
+                switch (menuOptionsIndex)
+                {
+                    // Play
+                    case 0:
+
+                        TaskOne();
+                        break;
+
+                    // Rules
+                    case 1:
+
+                        cout << "Rules: . . ." << endl;
+                        cout << "Press ESC to go back to the menu" << endl;
+                        break;
+
+                    // Exit
+                    case 2:
+
+                        cout << "Thanks for playing!" << endl;
+                        return 0;
+                        break;
+                }
+            }
+
         }
 
+    }
 }
