@@ -3,12 +3,30 @@
 
 using namespace std;
 
+void printLogo()
+{
+    cout << R"(
+   
+         ____    _____   _       _____   _   _   ___   _   _   __  __ 
+        / ___|  | ____| | |     | ____| | \ | | |_ _| | | | | |  \/  |
+        \___ \  |  _|   | |     |  _|   |  \| |  | |  | | | | | |\/| |
+         ___) | | |___  | |___  | |___  | |\  |  | |  | |_| | | |  | |
+        |____/  |_____| |_____| |_____| |_| \_| |___|  \___/  |_|  |_|
+                                                                 
+---------------------------------------------------------------------------------------------)";
+
+    cout << endl << endl;
+}
+
+
 int main()
 {
     // Declarations of the menu options
     string menuOptions[3] = { "Play", "Rules", "Exit" };
     int menuOptionsIndex = 0;
     bool flag = 0;
+
+    printLogo();
 
         // Menu outputs - the different options
     for (int i = 0; i < 3; i++)
@@ -22,6 +40,8 @@ int main()
             cout << "  " << menuOptions[i] << endl;
         }
     }
+
+    cout << endl << "---------------------------------------------------------------------------------------------";
 
     // Navigation system with W and S keys
     while (true)
@@ -71,6 +91,9 @@ int main()
             // This way we avoid the menu showing up when the user has already picked an option
             if (!flag)
             {
+
+                printLogo();
+
                 for (int i = 0; i < 3; i++)
                 {
                     if (menuOptionsIndex == i)
@@ -83,6 +106,9 @@ int main()
                     }
 
                 }
+
+                cout << endl << "---------------------------------------------------------------------------------------------";
+
             }
             else
             {
