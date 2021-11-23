@@ -1,5 +1,6 @@
 #include <conio.h> // _kbhit, _getch
 #include "LevelOne.h"
+#include <iomanip>
 
 using namespace std;
 
@@ -13,7 +14,7 @@ void printLogo()
          ___) | | |___  | |___  | |___  | |\  |  | |  | |_| | | |  | |
         |____/  |_____| |_____| |_____| |_| \_| |___|  \___/  |_|  |_|
                                                                  
----------------------------------------------------------------------------------------------)";
+------------------------------------------------------------------------------)";
 
     cout << endl << endl;
 }
@@ -33,15 +34,15 @@ int main()
     {
         if (menuOptionsIndex == i)
         {
-            cout << "> " << menuOptions[i] << " <"<< endl;
+            cout << setw(38) <<"> " << menuOptions[i] << " <"<< endl;
         }
         else
         {
-            cout << "  " << menuOptions[i] << endl;
+            cout << setw(38) << " " << menuOptions[i] << endl;
         }
     }
 
-    cout << endl << "---------------------------------------------------------------------------------------------";
+    cout << endl << "------------------------------------------------------------------------------";
 
     // Navigation system with W and S keys
     while (true)
@@ -52,6 +53,7 @@ int main()
             
             switch (_getch())
             {
+           
                 // With W the user can go up the options
                 case 'w':
 
@@ -98,27 +100,28 @@ int main()
                 {
                     if (menuOptionsIndex == i)
                     {
-                        cout << "> " << menuOptions[menuOptionsIndex] << " <" << endl;
+                        cout << setw(38) << "> "<< menuOptions[menuOptionsIndex] << " <" << endl;
                     }
                     else
                     {
-                        cout << "  " << menuOptions[i] << "  " << endl;
+                        cout << setw(38) << "  " << menuOptions[i] << "  " << endl;
                     }
 
                 }
 
-                cout << endl << "---------------------------------------------------------------------------------------------";
+                cout << endl << "------------------------------------------------------------------------------";
 
             }
             else
             {
+                system("cls");
                 // If the user is on one of the options
                 switch (menuOptionsIndex)
                 {
                     // Play
                     case 0:
 
-                        TaskOne();
+                        displayExercise();
                         break;
 
                     // Rules
@@ -136,8 +139,6 @@ int main()
                         break;
                 }
             }
-
         }
-
     }
 }

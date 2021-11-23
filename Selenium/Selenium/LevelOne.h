@@ -5,5 +5,10 @@
 #include <time.h> // library for time
 using namespace std;
 
-void TaskOne();
+int randomiseExercises();
+int randomiseValue1();
+int randomiseValue2();
+void displayExercise();
+
+
 
