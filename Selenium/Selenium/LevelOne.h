@@ -6,9 +6,13 @@
 using namespace std;
 
 int randomiseExercises();
-int randomiseValue1();
-int randomiseValue2();
+int firstValue();
+int secondValue();
+void firstExercise(bool firstDone);
+void secondExercise();
+void thirdExercise();
 void displayExercise();
+
 
 
 
