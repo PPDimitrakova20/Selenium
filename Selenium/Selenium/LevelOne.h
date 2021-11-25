@@ -5,10 +5,10 @@
 #include <time.h> // library for time
 using namespace std;
 
-int randomiseExercises();
+void randomiseExercises(int randEx[]);
 int firstValue();
 int secondValue();
-void firstExercise(bool firstDone);
+void firstExercise();
 void secondExercise();
 void thirdExercise();
 void displayExercise();

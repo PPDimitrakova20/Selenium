@@ -1,15 +1,27 @@
 #include "LevelOne.h"
 
 //Randomising exercises
-int randomiseExercises()
+void randomiseExercises(int randEx[])
 {
     system("cls");
     srand((unsigned)time(NULL));
 
-    return rand() % 3 + 1;
+    int temp;
+
+    for (int i = 2; i > 0; i--)
+    {
+        // Pick a random index from 0 to 2
+        int j = rand() % (i + 1);
+
+        // Swap randEx[i] with the element
+        // at random index
+        temp = randEx[j];
+        randEx[j] = randEx[i];
+        randEx[i] = temp;
+    }
 }
 
-//Declaration of random values
+//Randomising values
 int firstValue()
 {
     srand((unsigned)time(NULL));
@@ -26,7 +38,7 @@ int secondValue()
 
     int arrSecondValue[5] = { 1, 2, 4, 50, 200 };
     int indexSecondValue = rand() % 3;
-    
+
     return arrSecondValue[indexSecondValue];
 }
 
@@ -75,7 +87,6 @@ void thirdExercise()
     int value1 = firstValue();
     int value2 = secondValue();
 
-    
     cout << "For the elevation of construction materials on the upper end of an unfinished building" << endl;
     cout << "is montaged to a motionless spool. With it's help a worker with a weight of " << value1;
     cout << "N lifts the " << value2 << "N supplies up. What pressure does the ground he's standing on take?" << endl;
@@ -92,34 +103,33 @@ void thirdExercise()
     }
 }
 
-//
+
 void displayExercise()
 {
-    bool firstDone;
-    bool secondDone;
-    bool thirdDone;
+    int randEx[] = { 1, 2, 3 };
 
-    int randEx = randomiseExercises();
-    switch (randEx)
+    randomiseExercises(randEx);
+
+    for (int i = 0; i < 3; i++)
     {
         system("cls");
-
-    case 1:
-
-        firstExercise();
-        firstDone = true;
-        break;
-    case 2:
-
-        secondExercise();
-        secondDone = true;
-
-        break;
-    case 3:
-
-        secondExercise();
-        secondDone = true;
         
-        break;
+        switch (randEx[i])
+        {
+        case 1:
+
+            firstExercise();
+            break;
+
+        case 2:
+
+            secondExercise();
+            break;
+
+        case 3:
+
+            thirdExercise();
+            break;
+        }
     }
 }

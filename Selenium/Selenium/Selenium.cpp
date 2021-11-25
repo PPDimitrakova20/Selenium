@@ -44,9 +44,12 @@ int main()
 
     cout << endl << "------------------------------------------------------------------------------";
 
-    // Navigation system with W and S keys
-    while (true)
+    //TODO: Add comment. The endless while loop was breaking the randomisation
+    bool play = true;
+
+    while (play)
     {
+        // Navigation system with W and S keys
         if (_kbhit())
         {
             system("cls");
@@ -122,6 +125,7 @@ int main()
                     case 0:
 
                         displayExercise();
+                        play = false;
                         break;
 
                     // Rules
