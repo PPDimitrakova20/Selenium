@@ -1,6 +1,7 @@
-﻿#include "LevelTwo"
+﻿#include "LevelTwo.h"
 
-void firstExercise()
+// FIXME: First exercise defined in LevelOne.cpp
+/*void firstExercise()
 {
     int answearG; // P = mg
     int answearM, answearP;
@@ -32,11 +33,5 @@ void firstExercise()
     {
         cout << "Incorrect!" << endl;
     }
-    
-
-    
-
-
-
-}
+}*/
 

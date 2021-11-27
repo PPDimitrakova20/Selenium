@@ -140,10 +140,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="LevelOne.cpp" />
+    <ClCompile Include="LevelTwo.cpp" />
     <ClCompile Include="Selenium.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LevelOne.h" />
+    <ClInclude Include="LevelTwo.h" />
+    <ClInclude Include="Selenium.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
