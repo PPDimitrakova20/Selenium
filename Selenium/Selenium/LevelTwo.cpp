@@ -1,7 +1,7 @@
 ﻿#include "LevelTwo.h"
 
 // FIXME: First exercise defined in LevelOne.cpp
-/*void firstExercise()
+/*void firstExerciseLevelTwo()
 {
     int answearG; // P = mg
     int answearM, answearP;

@@ -43,7 +43,7 @@ int secondValue()
 }
 
 //The three exercises
-void firstExercise()
+void firstExerciseLevelOne()
 {
     int result;
     int value1 = firstValue();
@@ -63,7 +63,7 @@ void firstExercise()
     }
 }
 
-void secondExercise()
+void secondExerciseLevelOne()
 {
     char answer;
 
@@ -81,7 +81,7 @@ void secondExercise()
     }
 }
 
-void thirdExercise()
+void thirdExerciseLevelOne()
 {
     int result;
     int value1 = firstValue();
@@ -118,17 +118,17 @@ void displayExercise()
         {
         case 1:
 
-            firstExercise();
+            firstExerciseLevelOne();
             break;
 
         case 2:
 
-            secondExercise();
+            secondExerciseLevelOne();
             break;
 
         case 3:
 
-            thirdExercise();
+            thirdExerciseLevelOne();
             break;
         }
     }
