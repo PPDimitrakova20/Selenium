@@ -1,5 +1,11 @@
 #include "LevelOne.h"
 
+void pause()
+{
+    cout << endl <<  "Press any key to continue...";
+    _getch();
+}
+
 //Randomising exercises
 void randomiseExercises(int randEx[])
 {
@@ -57,9 +63,14 @@ void firstExerciseLevelOne()
     {
         cout << "Incorrect!";
     }
-    else
+    else if (result == (value1 - value2))
     {
         cout << "Correct!";
+    }
+    else
+    {
+        cout << "Incorrecr Input" << endl;
+        cin >> result;
     }
 }
 
@@ -71,14 +82,25 @@ void secondExerciseLevelOne()
 
     cin >> answer;
 
-    if (answer == 'N')
+    while (true)
     {
-        cout << "Correct!";
+        if (answer == 'N' or answer == 'n')
+        {
+            cout << "Correct!";
+            break;
+        }
+        else if (answer == 'Y' or answer == 'y')
+        {
+            cout << "Incorrect!";
+            break;
+        }
+        else
+        {
+            cout << "Incorrecr Input. Expected Input: Y/N" << endl;
+            cin >> answer;
+        }
     }
-    else if (answer == 'Y')
-    {
-        cout << "Incorrect!";
-    }
+    
 }
 
 void thirdExerciseLevelOne()
@@ -97,9 +119,14 @@ void thirdExerciseLevelOne()
     {
         cout << "Incorrect!";
     }
-    else
+    else if(result == (value1 - value2))
     {
         cout << "Correct!";
+    }
+    else
+    {
+        cout << "Incorrecr Input" << endl;
+        cin >> result;
     }
 }
 
@@ -131,5 +158,7 @@ void displayExercise()
             thirdExerciseLevelOne();
             break;
         }
+
+        pause();
     }
 }
