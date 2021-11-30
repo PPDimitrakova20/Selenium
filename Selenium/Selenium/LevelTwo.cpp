@@ -41,26 +41,31 @@ void firstExerciseLevelTwo()
     srand((unsigned)time(NULL));
 
     float result1, result2, result3;
-    int weight[7] = { 10, 12, 24, 43, 70, 80, 96};
-    float mass[7] = { 3.5, 21, 46, 7, 8.1, 10, 3.5};
-    int indexWeight = rand() % 7;
-    int indexMassOne = rand() % 7;
-    int indexMassTwo = rand() % 7;
+    int weight[7] = { 10, 12, 24, 43, 70, 80, 96 };
+
+
+    int indexWeightOne = rand() % 7;
+    int indexWeightTwo = rand() % 7;
+    int indexWeightThree = rand() % 7;
 
     Table tableOne;
 
-    tableOne.add_row({ "P", "m", "g"});
-    tableOne.add_row({ to_string(weight[indexWeight]), "...", "10"});
-    tableOne.add_row({ "...",  to_string(mass[indexMassOne]), "10"});
-    tableOne.add_row({ "...",  to_string(mass[indexMassTwo]), "10"});
+    tableOne.add_row({ "P", "m", "g" });
+    tableOne.add_row({ to_string(weight[indexWeightOne]), "...", "10" });
+    tableOne.add_row({ to_string(weight[indexWeightTwo]), "..." , "10" });
+    tableOne.add_row({ to_string(weight[indexWeightThree]), "..." , "10" });
 
     cout << tableOne << endl;
     cout << endl;
     cout << "Enter your answers:";
     cin >> result1 >> result2 >> result3;
 
-    if (result1 == (weight[indexWeight] / 10))
+    if (result1 == (weight[indexWeightOne] / 10) && result2 == (weight[indexWeightTwo] / 10) && result3 == (weight[indexWeightThree] / 10))
     {
-
+        cout << "Correct!" << endl;
+    }
+    else
+    {
+        cout << "Incorrect!" << endl;
     }
 }
