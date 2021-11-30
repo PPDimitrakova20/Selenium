@@ -54,28 +54,28 @@ void menuSelectedOption(string menu[3], int indexMenu)
 
     }
 }
-int movementUp(int up)
+void movementUp(int &up)
 {
     // This way we avoid the situation where it can go up forever
-    if (up <= -1)
+    if (up <= 0)
     {
-        return up = 2;
+        up = 2;
     }
     else
     {
-        return up--;
+        --up;
     }
 }
-int movementDown(int down)
+void movementDown(int &down)
 {
     // This way we avoid the situation where it can go down forever
-    if (down >= 3)
+    if (down >= 2)
     {
-        return 0;
+        down = 0;
     }
     else
     {
-        return down++;
+        ++down;
     }
 }
 
@@ -135,17 +135,17 @@ int main()
             {
 
                 // With W the user can go up the options
+            case 'W':
             case 'w':
 
-                //FIXME: The movement is bugged. It doesn't return the value.
-                menuOptionsIndex = movementUp(menuOptionsIndex);
+                movementUp(menuOptionsIndex);
                 break;
 
                 // With S the user can go down the options
+            case 'S':
             case 's':
 
-                //FIXME: The movement is bugged. It doesn't return the value.
-                menuOptionsIndex = movementDown(menuOptionsIndex);
+                movementDown(menuOptionsIndex);
                 break;
 
                 // If the user presses Enter
