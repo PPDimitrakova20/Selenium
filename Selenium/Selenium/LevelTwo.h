@@ -1,9 +1,10 @@
 #pragma once
 
 #include <iostream>
-#include <stdlib.h> // library for rand() and srand()
 #include <time.h> // library for time
+#include <tabulate.hpp>
 
+using namespace tabulate;
 using namespace std;
 
-void firstExercise();
+void firstExerciseLevelTwo();

@@ -145,6 +145,8 @@ void optionPicker(int selectedOption, bool &play)
 
 int main()
 {
+    firstExerciseLevelTwo();
+
     // Declarations of the menu options
     string menuOptions[3] = { "Play", "Rules", "Exit" };
     int menuOptionsIndex = 0;

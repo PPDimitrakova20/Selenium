@@ -35,3 +35,14 @@
     }
 }*/
 
+
+void firstExerciseLevelTwo()
+{
+    Table tableOne;
+
+    tableOne.add_row({ "P", "m", "g"});
+    tableOne.add_row({ "8", "4", "..." });
+    tableOne.add_row({ "16", "...", "1" });
+    tableOne.add_row({ "...", "2", "8" });
+    cout << tableOne << endl;
+}
