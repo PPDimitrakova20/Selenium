@@ -3,7 +3,7 @@
 #include <iomanip>
 #include <conio.h>
 
-
+//Output for the logo
 void printLogo()
 {
     cout << R"(
@@ -54,6 +54,7 @@ void menuSelectedOption(string menu[3], int indexMenu)
 
     }
 }
+
 void movementUp(int &up)
 {
     // This way we avoid the situation where it can go up forever
@@ -66,6 +67,7 @@ void movementUp(int &up)
         --up;
     }
 }
+
 void movementDown(int &down)
 {
     // This way we avoid the situation where it can go down forever
@@ -79,31 +81,64 @@ void movementDown(int &down)
     }
 }
 
-void optionPicker(int selectedOption, bool play)
+// Navigation system with W and S keys
+void navigationSystem(int &navigationMechanics, bool &flag)
 {
-    // If the user is on one of the options
+    switch (_getch())
+    {
+
+    // With W the user can go up the options
+    case 'W':
+    case 'w':
+
+        movementUp(navigationMechanics);
+        break;
+
+    // With S the user can go down the options
+    case 'S':
+    case 's':
+
+        movementDown(navigationMechanics);
+        break;
+
+    // If the user presses Enter
+    case 13:
+
+        flag = 1;
+        break;
+
+    // If the user presses Escape to go back 
+    case 27:
+
+        flag = 0;
+        break;
+    }
+}
+
+// If the user is on one of the options
+void optionPicker(int selectedOption, bool &play)
+{
     switch (selectedOption)
     {
-        // Play
+    // Play
     case 0:
 
         displayExercise();
-        play = false;
+        play = true;
         break;
 
-        // Rules
+    // Rules
     case 1:
 
         cout << "Rules: . . ." << endl;
         cout << "Press ESC to go back to the menu" << endl;
         break;
 
-        // Exit
+    // Exit
     case 2:
 
-        //FIXME: Doesn't end the program. I think it ends only the function
         cout << "Thanks for playing!" << endl;
-        return;
+        play = true;
         break;
     }
 }
@@ -121,45 +156,16 @@ int main()
 
     cout << endl << "------------------------------------------------------------------------------";
 
-    //TODO: Add comment. The endless while loop was breaking the randomisation
-    bool play = true;
+    //With "play" the user can stop the game either with "Exit" or do all the tasks in "Play"
+    bool play = false;
 
-    while (play)
+    while (!play)
     {
-        // Navigation system with W and S keys
         if (_kbhit())
         {
             system("cls");
 
-            switch (_getch())
-            {
-
-                // With W the user can go up the options
-            case 'W':
-            case 'w':
-
-                movementUp(menuOptionsIndex);
-                break;
-
-                // With S the user can go down the options
-            case 'S':
-            case 's':
-
-                movementDown(menuOptionsIndex);
-                break;
-
-                // If the user presses Enter
-            case 13:
-
-                flag = 1;
-                break;
-
-                // If the user presses Escape to go back 
-            case 27:
-
-                flag = 0;
-                break;
-            }
+            navigationSystem(menuOptionsIndex, flag);
 
             // This way we avoid the menu showing up when the user has already picked an option
             if (!flag)
