@@ -1,8 +1,10 @@
 #include "LevelOne.h"
 
+
 void pause()
 {
     cout << endl <<  "Press any key to continue...";
+
     _getch();
 }
 
@@ -33,7 +35,7 @@ int firstValue()
     srand((unsigned)time(NULL));
 
     int arrFirstValue[10] = { 500, 300, 200, 100, 250, 20, 16, 12, 8, 4 };
-    int indexFirstValue = rand() % 10;
+    int indexFirstValue = rand() % SIZE(arrFirstValue);
 
     return arrFirstValue[indexFirstValue];
 }
@@ -42,8 +44,8 @@ int secondValue()
 {
     srand((unsigned)time(NULL));
 
-    int arrSecondValue[5] = { 1, 2, 4, 50, 200 };
-    int indexSecondValue = rand() % 3;
+    int arrSecondValue[] = { 1, 2, 4, 50, 200 };
+    int indexSecondValue = rand() % SIZE(arrSecondValue);
 
     return arrSecondValue[indexSecondValue];
 }
@@ -66,11 +68,6 @@ void showFirstExerciseLevelOne()
     else if (result == (value1 - value2))
     {
         cout << "Correct!";
-    }
-    else
-    {
-        cout << "Incorrecr Input" << endl;
-        cin >> result;
     }
 }
 
@@ -100,7 +97,6 @@ void showSecondExerciseLevelOne()
             cin >> answer;
         }
     }
-    
 }
 
 void showThirdExerciseLevelOne()
@@ -122,11 +118,6 @@ void showThirdExerciseLevelOne()
     else if(result == (value1 - value2))
     {
         cout << "Correct!";
-    }
-    else
-    {
-        cout << "Incorrecr Input" << endl;
-        cin >> result;
     }
 }
 
@@ -161,6 +152,7 @@ void displayExerciseLevelOne()
 
         pause();
     }
+
     system("cls");
     displayExerciseLevelTwo();
 }

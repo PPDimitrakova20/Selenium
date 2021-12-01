@@ -18,9 +18,9 @@ void showFirstExerciseLevelTwo()
     float weight[7] = { 10, 12, 24, 43, 70, 80, 96 };
 
     //Initialize variables for random numbers values
-    int indexWeightOne = rand() % 7;
-    int indexWeightTwo = rand() % 7;
-    int indexWeightThree = rand() % 7;
+    int indexWeightOne = rand() % SIZE(weight);
+    int indexWeightTwo = rand() % SIZE(weight);
+    int indexWeightThree = rand() % SIZE(weight);
 
     Table tableOne; //Initialize table
 
@@ -67,14 +67,14 @@ void showSecondExerciseLevelTwo()
     float road[6] = { 1, 3, 6, 9, 18, 36 };
 
     //Initialize variables for random numbers values
-    int indexWorkOne = rand() % 4;
-    int indexWorkTwo = rand() % 4;
+    int indexWorkOne = rand() % SIZE(work);
+    int indexWorkTwo = rand() % SIZE(work);
 
-    int indexStrengthOne = rand() % 6;
-    int indexStrengthTwo = rand() % 6;
+    int indexStrengthOne = rand() % SIZE(strength);
+    int indexStrengthTwo = rand() % SIZE(strength);
 
-    int indexRoadOne = rand() % 6;
-    int indexRoadTwo = rand() % 6;
+    int indexRoadOne = rand() % SIZE(road);
+    int indexRoadTwo = rand() % SIZE(road);
 
    
 
@@ -122,14 +122,14 @@ void showThirdExerciseLevelTwo()
     float area[5] = { 1, 2, 4, 8, 16 };
 
     //Initialize variables for random numbers values
-    int indexPressureOne = rand() % 3;
-    int indexPressureTwo = rand() % 3;
+    int indexPressureOne = rand() % SIZE(pressure);
+    int indexPressureTwo = rand() % SIZE(pressure);
 
-    int indexStrengthOne = rand() % 3;
-    int indexStrengthTwo = rand() % 3;
+    int indexStrengthOne = rand() % SIZE(strength);
+    int indexStrengthTwo = rand() % SIZE(strength);
 
-    int indexAreaOne = rand() % 5;
-    int indexAreaTwo = rand() % 5;
+    int indexAreaOne = rand() % SIZE(area);
+    int indexAreaTwo = rand() % SIZE(area);
 
 
 
