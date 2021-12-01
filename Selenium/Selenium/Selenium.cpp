@@ -123,7 +123,7 @@ void optionPicker(int selectedOption, bool &play)
     // Play
     case 0:
 
-        displayExercise();
+        displayExerciseLevelOne();
         play = true;
         break;
 
@@ -145,8 +145,7 @@ void optionPicker(int selectedOption, bool &play)
 
 int main()
 {
-    firstExerciseLevelTwo();
-    secondExerciseLevelTwo();
+    
 
     // Declarations of the menu options
     string menuOptions[3] = { "Play", "Rules", "Exit" };

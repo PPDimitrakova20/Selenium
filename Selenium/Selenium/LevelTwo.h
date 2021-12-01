@@ -8,5 +8,6 @@
 using namespace tabulate;
 using namespace std;
 
-void firstExerciseLevelTwo();
-void secondExerciseLevelTwo();
+
+void displayExerciseLevelOne();
+void pause();

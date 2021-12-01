@@ -6,4 +6,5 @@
 
 using namespace std;
 
-void displayExercise();
+void displayExerciseLevelOne();
+void displayExerciseLevelTwo();

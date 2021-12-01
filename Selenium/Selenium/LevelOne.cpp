@@ -49,7 +49,7 @@ int secondValue()
 }
 
 //The three exercises
-void firstExerciseLevelOne()
+void showFirstExerciseLevelOne()
 {
     int result;
     int value1 = firstValue();
@@ -74,7 +74,7 @@ void firstExerciseLevelOne()
     }
 }
 
-void secondExerciseLevelOne()
+void showSecondExerciseLevelOne()
 {
     char answer;
 
@@ -103,7 +103,7 @@ void secondExerciseLevelOne()
     
 }
 
-void thirdExerciseLevelOne()
+void showThirdExerciseLevelOne()
 {
     int result;
     int value1 = firstValue();
@@ -131,7 +131,7 @@ void thirdExerciseLevelOne()
 }
 
 
-void displayExercise()
+void displayExerciseLevelOne()
 {
     int randEx[] = { 1, 2, 3 };
 
@@ -145,20 +145,22 @@ void displayExercise()
         {
         case 1:
 
-            firstExerciseLevelOne();
+            showFirstExerciseLevelOne();
             break;
 
         case 2:
 
-            secondExerciseLevelOne();
+            showSecondExerciseLevelOne();
             break;
 
         case 3:
 
-            thirdExerciseLevelOne();
+            showThirdExerciseLevelOne();
             break;
         }
 
         pause();
     }
+    system("cls");
+    displayExerciseLevelTwo();
 }
