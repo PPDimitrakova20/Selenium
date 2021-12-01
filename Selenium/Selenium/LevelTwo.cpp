@@ -1,5 +1,9 @@
 ﻿#include "LevelTwo.h"
 
+string convertToString(float value)
+{
+    return to_string(value).erase(2, 7);
+}
 
 void showFirstExerciseLevelTwo()
 {
@@ -24,9 +28,9 @@ void showFirstExerciseLevelTwo()
 
     // Set the table values
     tableOne.add_row({ "P", "m", "g" });
-    tableOne.add_row({ to_string(weight[indexWeightOne]).erase(2 , 7), "...", "10" });
-    tableOne.add_row({ to_string(weight[indexWeightTwo]).erase(2 , 7), "..." , "10" });
-    tableOne.add_row({ to_string(weight[indexWeightThree]).erase(2 , 7), "..." , "10" });
+    tableOne.add_row({ convertToString(weight[indexWeightOne]), "...", "10" });
+    tableOne.add_row({ convertToString(weight[indexWeightTwo]), "..." , "10" });
+    tableOne.add_row({ convertToString(weight[indexWeightThree]), "..." , "10" });
 
     cout << tableOne << endl; // Print the table
     cout << endl;
@@ -80,9 +84,9 @@ void showSecondExerciseLevelTwo()
 
     // Set the table values
     tableTwo.add_row({ "A", "F", "s" });
-    tableTwo.add_row({ "...", to_string(strength[indexStrengthOne]).erase(2 , 7), to_string(road[indexRoadOne]).erase(2 , 7), });
-    tableTwo.add_row({ to_string(work[indexWorkOne]).erase(2 , 7), to_string(strength[indexStrengthTwo]).erase(2 , 7), "..." });
-    tableTwo.add_row({ to_string(work[indexWorkTwo]).erase(2 , 7), "...", to_string(road[indexRoadTwo]).erase(2 , 7) });
+    tableTwo.add_row({ "...",convertToString(strength[indexStrengthOne]), convertToString(road[indexRoadOne])});
+    tableTwo.add_row({ convertToString(work[indexWorkOne ]), convertToString(strength[indexStrengthTwo]), "..."});
+    tableTwo.add_row({ convertToString(work[indexWorkTwo]), "...", convertToString(road[indexRoadTwo])});
 
     cout << tableTwo << endl; // Print the table
     cout << endl;
@@ -135,9 +139,9 @@ void showThirdExerciseLevelTwo()
 
     // Set the table values
     tableThree.add_row({ "p", "F", "S" });
-    tableThree.add_row({ "...", to_string(strength[indexStrengthOne]).erase(2 , 7), to_string(area[indexAreaOne]).erase(2 , 7), });
-    tableThree.add_row({ to_string(pressure[indexPressureTwo]).erase(2 , 7), "...", to_string(area[indexAreaTwo]).erase(2 , 7) });
-    tableThree.add_row({ to_string(pressure[indexPressureOne]).erase(2 , 7), to_string(strength[indexStrengthTwo]).erase(2 , 7), "..." });
+    tableThree.add_row({ "...", convertToString(strength[indexStrengthOne]), convertToString(area[indexAreaOne])});
+    tableThree.add_row({ convertToString(pressure[indexPressureTwo]), "...", convertToString(area[indexAreaTwo])});
+    tableThree.add_row({ convertToString(pressure[indexPressureOne]), convertToString(strength[indexStrengthTwo]), "..." });
 
     cout << tableThree << endl; // Print the table
     cout << endl;
