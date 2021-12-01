@@ -9,3 +9,4 @@ using namespace tabulate;
 using namespace std;
 
 void firstExerciseLevelTwo();
+void secondExerciseLevelTwo();
