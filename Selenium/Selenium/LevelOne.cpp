@@ -1,10 +1,9 @@
 #include "LevelOne.h"
 
-
+//Pause game until input
 void pause()
 {
     cout << endl <<  "Press any key to continue...";
-
     _getch();
 }
 
@@ -12,7 +11,6 @@ void pause()
 void randomiseExercises(int randEx[])
 {
     system("cls");
-    srand((unsigned)time(NULL));
 
     int temp;
 
@@ -30,42 +28,33 @@ void randomiseExercises(int randEx[])
 }
 
 //Randomising values
-int firstValue()
+
+void pickValue(int arr[], int &value, int size)
 {
-    srand((unsigned)time(NULL));
-
-    int arrFirstValue[10] = { 500, 300, 200, 100, 250, 20, 16, 12, 8, 4 };
-    int indexFirstValue = rand() % SIZE(arrFirstValue);
-
-    return arrFirstValue[indexFirstValue];
-}
-
-int secondValue()
-{
-    srand((unsigned)time(NULL));
-
-    int arrSecondValue[] = { 1, 2, 4, 50, 200 };
-    int indexSecondValue = rand() % SIZE(arrSecondValue);
-
-    return arrSecondValue[indexSecondValue];
+    int index = rand() % size;
+    value = arr[index];
 }
 
 //The three exercises
 void showFirstExerciseLevelOne()
 {
     int result;
-    int value1 = firstValue();
-    int value2 = secondValue();
+    int arrMassValues[] = { 500, 300, 200, 100, 250, 20, 16, 12, 8, 4 };
+    int arrForceValues[] = { 1, 2, 4, 50, 200 };
+    int mass, force;
 
-    cout << "A body with mass " << value2 << " kg is acted upon by a force " << value1 << "N. What is its acceleration?" << endl;
+    pickValue(arrMassValues, mass, SIZE(arrMassValues));
+    pickValue(arrForceValues, force, SIZE(arrForceValues));
+
+    cout << "A body with mass " << mass << " kg is acted upon by a force " << force << "N. What is its acceleration?" << endl;
 
     cin >> result;
 
-    if (result != (value1 / value2))
+    if (result != (mass / force))
     {
         cout << "Incorrect!";
     }
-    else if (result == (value1 - value2))
+    else if (result == (mass - force))
     {
         cout << "Correct!";
     }
@@ -102,20 +91,26 @@ void showSecondExerciseLevelOne()
 void showThirdExerciseLevelOne()
 {
     int result;
-    int value1 = firstValue();
-    int value2 = secondValue();
+    int weight;
+    int weightSupplies;
 
-    cout << "For the elevation of construction materials on the upper end of an unfinished building" << endl;
-    cout << "is montaged to a motionless spool. With it's help a worker with a weight of " << value1;
-    cout << "N lifts the " << value2 << "N supplies up. What pressure does the ground he's standing on take?" << endl;
+    int arrWeightValues[] = { 5000, 3000, 200, 100, 250, 20, 16, 12, 8, 4 };
+    int arrWeightSuppliesValues[] = { 1, 2, 4, 50, 200 };
+
+    pickValue(arrWeightValues, weight,SIZE(arrWeightValues));
+    pickValue(arrWeightSuppliesValues, weightSupplies,SIZE(arrWeightSuppliesValues));
+
+    cout << "For the elevation of construction materials, on the upper end of an unfinished building" << endl;
+    cout << "is montaged a motionless spool. With it's help a worker with a weight of " << weight;
+    cout << "N lifts the " << weightSupplies << "N supplies up. What pressure does the ground he's standing on take?" << endl;
 
     cin >> result;
 
-    if (result != (value1 - value2))
+    if (result != (weight - weightSupplies))
     {
         cout << "Incorrect!";
     }
-    else if(result == (value1 - value2))
+    else if(result == (weight - weightSupplies))
     {
         cout << "Correct!";
     }
@@ -124,6 +119,9 @@ void showThirdExerciseLevelOne()
 
 void displayExerciseLevelOne()
 {
+
+    srand((unsigned)time(NULL));
+
     int randEx[] = { 1, 2, 3 };
 
     randomiseExercises(randEx);
