@@ -38,7 +38,7 @@ void game()
 {
     displayExerciseLevelOne();
     displayExerciseLevelTwo();
-    levelThree();
+    displayExerciseLevelThree();
 }
 
 // Menu output changes after the certain option is selected
