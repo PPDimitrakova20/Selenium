@@ -170,6 +170,4 @@ void displayExerciseLevelTwo()
     system("cls");
     showThirdExerciseLevelTwo();
     system("cls");
-
-    levelThree();
 }

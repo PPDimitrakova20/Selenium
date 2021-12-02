@@ -34,6 +34,13 @@ void firstOutput(string menu[3])
     }
 }
 
+void game()
+{
+    displayExerciseLevelOne();
+    displayExerciseLevelTwo();
+    levelThree();
+}
+
 // Menu output changes after the certain option is selected
 void menuSelectedOption(string menu[3], int indexMenu)
 {
@@ -120,7 +127,7 @@ void optionPicker(int selectedOption, bool &play)
         // Play
     case 0:
 
-        displayExerciseLevelOne();
+        game();
         play = true;
         break;
 

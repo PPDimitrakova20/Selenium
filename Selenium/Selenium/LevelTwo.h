@@ -13,5 +13,5 @@
 using namespace tabulate;
 using namespace std;
 
-void displayExerciseLevelOne();
 void pause();
+void displayExerciseLevelTwo();

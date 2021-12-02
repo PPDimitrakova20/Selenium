@@ -152,5 +152,4 @@ void displayExerciseLevelOne()
     }
 
     system("cls");
-    displayExerciseLevelTwo();
 }

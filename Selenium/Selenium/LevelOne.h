@@ -10,4 +10,3 @@
 using namespace std;
 
 void displayExerciseLevelOne();
-void displayExerciseLevelTwo();
