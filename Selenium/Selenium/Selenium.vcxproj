@@ -143,11 +143,12 @@
     <ClCompile Include="LevelOne.cpp" />
     <ClCompile Include="LevelTwo.cpp" />
     <ClCompile Include="Selenium.cpp" />
+    <ClCompile Include="Menu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LevelOne.h" />
     <ClInclude Include="LevelTwo.h" />
-    <ClInclude Include="Selenium.h" />
+    <ClInclude Include="Menu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
