@@ -19,8 +19,7 @@ void randomiseExercises(int randEx[])
         // Pick a random index from 0 to 2
         int j = rand() % (i + 1);
 
-        // Swap randEx[i] with the element
-        // at random index
+        // Swap randEx[i] with the element at random index
         temp = randEx[j];
         randEx[j] = randEx[i];
         randEx[i] = temp;
@@ -28,7 +27,6 @@ void randomiseExercises(int randEx[])
 }
 
 //Randomising values
-
 void pickValue(int arr[], int &value, int size)
 {
     int index = rand() % size;
@@ -50,13 +48,13 @@ void showFirstExerciseLevelOne()
 
     cin >> result;
 
-    if (result != (mass / force))
-    {
-        cout << "Incorrect!";
-    }
-    else if (result == (mass - force))
+    if (result == (mass - force))
     {
         cout << "Correct!";
+    }
+    else if (result != (mass / force))
+    {
+        cout << "Incorrect!";
     }
 }
 
@@ -66,10 +64,12 @@ void showSecondExerciseLevelOne()
 
     cout << "Is it possible for a person who is on a moving-up escalator to remain at rest, relative to the earth's surface? (Y/N)" << endl;
 
-    cin >> answer;
+    answer = _getch();
 
     while (true)
     {
+        cout << answer << endl;
+
         if (answer == 'N' or answer == 'n')
         {
             cout << "Correct!";
@@ -82,7 +82,7 @@ void showSecondExerciseLevelOne()
         }
         else
         {
-            cout << "Incorrecr Input. Expected Input: Y/N" << endl;
+            cout << "Incorrect Input. Expected Input: Y/N" << endl;
             cin >> answer;
         }
     }
@@ -106,13 +106,13 @@ void showThirdExerciseLevelOne()
 
     cin >> result;
 
-    if (result != (weight - weightSupplies))
-    {
-        cout << "Incorrect!";
-    }
-    else if(result == (weight - weightSupplies))
+    if (result == (weight - weightSupplies))
     {
         cout << "Correct!";
+    }
+    else if(result != (weight - weightSupplies))
+    {
+        cout << "Incorrect!";
     }
 }
 
@@ -129,7 +129,7 @@ void displayExerciseLevelOne()
     for (int i = 0; i < 3; i++)
     {
         system("cls");
-        
+
         switch (randEx[i])
         {
         case 1:
@@ -147,7 +147,7 @@ void displayExerciseLevelOne()
             showThirdExerciseLevelOne();
             break;
         }
-
+        
         pause();
     }
 
