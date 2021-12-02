@@ -141,11 +141,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="LevelOne.cpp" />
+    <ClCompile Include="LevelThree.cpp" />
     <ClCompile Include="LevelTwo.cpp" />
     <ClCompile Include="Selenium.cpp" />
     <ClCompile Include="Menu.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LevelThree.h" />
     <ClInclude Include="LevelOne.h" />
     <ClInclude Include="LevelTwo.h" />
     <ClInclude Include="Menu.h" />

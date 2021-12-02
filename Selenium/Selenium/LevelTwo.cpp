@@ -171,5 +171,5 @@ void displayExerciseLevelTwo()
     showThirdExerciseLevelTwo();
     system("cls");
 
-    
+    levelThree();
 }
