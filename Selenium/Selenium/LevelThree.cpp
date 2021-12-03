@@ -34,9 +34,6 @@ void showFirstExerciseLevelThree()
     {
         cout << "Incorrect";
     }
-
-    pause();
-    system("cls");
 }
 
 void showSecondExerciseLevelThree()
@@ -71,9 +68,6 @@ void showSecondExerciseLevelThree()
     {
         cout << "Incorrect";
     }
-
-    pause();
-    system("cls");
 }
 
 void showThirdExerciseLevelThree()
@@ -118,16 +112,37 @@ void showThirdExerciseLevelThree()
     {
         cout << "Incorrect";
     }
-
-    pause();
-    system("cls");
 }
 
 void displayExerciseLevelThree()
 {
-    showFirstExerciseLevelThree();
+    int randEx[] = { 1, 2, 3 };
 
-    showSecondExerciseLevelThree();
+    randomiseExercises(randEx);
 
-    showThirdExerciseLevelThree();
+    for (int i = 0; i < 3; i++)
+    {
+        system("cls");
+
+        switch (randEx[i])
+        {
+        case 1:
+
+            showFirstExerciseLevelThree();
+            break;
+
+        case 2:
+
+            showSecondExerciseLevelThree();
+            break;
+
+        case 3:
+
+            showThirdExerciseLevelThree();
+            break;
+        }
+
+        pause();
+        system("cls");
+    }
 }

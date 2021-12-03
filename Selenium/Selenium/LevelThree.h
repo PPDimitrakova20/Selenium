@@ -10,3 +10,4 @@ using namespace std;
 void displayExerciseLevelThree();
 void pause();
 void pickValue(int arr[], int& value, int size);
+void randomiseExercises(int randEx[]);
