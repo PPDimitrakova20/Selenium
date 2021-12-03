@@ -69,7 +69,7 @@ void showSecondExerciseLevelOne()
     cout << "   Is it possible for a person who is on a moving-up escalator" << endl
          << "   to remain at rest, relative to the earth's surface? (Y/N)" << endl;
     cout << endl;
-
+    
     cout << "   Enter your answer: ";
     result = _getch();
 
@@ -90,7 +90,8 @@ void showSecondExerciseLevelOne()
         else
         {
             cout << "   Incorrect Input. Expected Input: Y/N" << endl;
-            cin >> result;
+            cout << "   Enter your answer: ";
+            result = _getch();
         }
     }
 }
