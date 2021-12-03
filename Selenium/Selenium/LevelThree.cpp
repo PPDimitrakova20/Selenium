@@ -1,9 +1,7 @@
 #include "LevelThree.h"
 
-void showFirstExerciseLevelThree()
+void printFirstExcerciseLevelThree()
 {
-    char result;
-
     cout << R"(
     Which circuit is a parallel circuit?
 
@@ -16,22 +14,171 @@ void showFirstExerciseLevelThree()
     |      _____      |     |  _____   _____  |     |      _____      |
     +------|___|------+     +--|___|---|___|--+     +------|___|------+
 
-    A)                     B)                      C)
-
-
 )";
+}
 
-    // TODO: Make options selectable with _getch()
-    cout << "   Enter your answer: ";
-    cin >> result;
+void printFirstExcerciseAnswers(string answers[3])
+{
+    int answersIndex = 0;
 
-    if (result == 'C' || result == 'c' || result == 'C)' || result == 'c)')
+    printFirstExcerciseLevelThree();
+
+    for (int i = 0; i < 3; i++)
     {
-        cout << "   Correct!";
+        if (answersIndex == i)
+        {
+            if (i == 0)
+            {
+                cout << setw(6) << answers[i] << "<";
+            }
+            else
+            {
+                cout << setw(10) << answers[i] << "<";
+            }
+        }
+        else
+        {
+            cout << setw(10) << answers[i];
+        }
+    }
+}
+
+void moveLeft(int &left)
+{
+    // This way we avoid the situation where it can go right forever
+    if (left <= 0)
+    {
+        left = 2;
     }
     else
     {
-        cout << "   Incorrect!";
+        --left;
+    }
+}
+
+void moveRight(int &right)
+{
+    // This way we avoid the situation where it can go right forever
+    if (right >= 2)
+    {
+        right = 0;
+    }
+    else
+    {
+        ++right;
+    }
+}
+
+void navigateBetweenAnswers(int &navigationMechanics, bool &flag)
+{
+    switch (_getch())
+    {
+
+        // With A the user can go right
+    case 'A':
+    case 'a':
+
+        moveLeft(navigationMechanics);
+        break;
+
+        // With D the user can go left
+    case 'D':
+    case 'd':
+
+        moveRight(navigationMechanics);
+        break;
+
+        // If the user presses Enter
+    case 13:
+
+        flag = 1;
+        break;
+
+    }
+}
+void selectFirstExcerciseAnswer(string answers[3], int indexAnswers)
+{
+    printFirstExcerciseLevelThree();
+
+    for (int i = 0; i < 3; i++)
+    {
+        if (indexAnswers == i)
+        {
+            if (indexAnswers == 0)
+            {
+                cout << setw(6) << answers[indexAnswers] << "<";
+            }
+            else
+            {
+                cout << setw(9) << answers[indexAnswers] << "<";
+            }
+        }
+        else
+        {
+            cout << setw(10) << answers[i];
+        }
+
+    }
+}
+// If the user is on one of the options
+void answerPick(int selectedAnswer, bool &complete)
+{
+    switch (selectedAnswer)
+    {
+        // A)
+    case 0:
+
+        cout << "Incorrect!";
+        complete = 1;
+        break;
+
+        // B)
+    case 1:
+
+        cout << "Incorrect!" << endl;
+        complete = 1;
+        break;
+
+        // C)
+    case 2:
+
+        cout << "Correct!" << endl;
+        complete = 1;
+        break;
+    }
+}
+
+
+void showFirstExerciseLevelThree()
+{
+    char result;
+    string options[3] = { "A)", "B)", "C)" };
+    int optionsIndex = 0;
+    bool flag = 0;
+    bool complete = 0;
+
+    printFirstExcerciseAnswers(options);
+
+    while (!complete)
+    {
+        if (_kbhit())
+        {
+            system("cls");
+
+            navigateBetweenAnswers(optionsIndex, flag);
+
+            // This way we avoid the answers showing up again
+            if (!flag)
+            {
+                selectFirstExcerciseAnswer(options, optionsIndex);
+
+            }
+            else
+            {
+                system("cls");
+                answerPick(optionsIndex, complete);
+            }
+        }
     }
 }
 
