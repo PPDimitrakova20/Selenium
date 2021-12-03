@@ -143,6 +143,7 @@
     <ClCompile Include="LevelOne.cpp" />
     <ClCompile Include="LevelThree.cpp" />
     <ClCompile Include="LevelTwo.cpp" />
+    <ClCompile Include="Rules.cpp" />
     <ClCompile Include="Selenium.cpp" />
     <ClCompile Include="Menu.cpp" />
   </ItemGroup>
@@ -151,6 +152,7 @@
     <ClInclude Include="LevelOne.h" />
     <ClInclude Include="LevelTwo.h" />
     <ClInclude Include="Menu.h" />
+    <ClInclude Include="Rules.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

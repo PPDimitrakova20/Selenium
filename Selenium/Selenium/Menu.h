@@ -10,3 +10,4 @@
 using namespace std;
 
 void menu();
+void displayLegend();
