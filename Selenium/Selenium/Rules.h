@@ -4,4 +4,4 @@
 
 using namespace std;
 
-void displayLegend();
+void displayRules();

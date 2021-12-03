@@ -134,7 +134,7 @@ void optionPicker(int selectedOption, bool &play)
         // Rules
     case 1:
 
-        displayLegend();
+        displayRules();
         cout << "Press ESC to go back to the menu" << endl;
         break;
 
