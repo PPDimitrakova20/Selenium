@@ -3,7 +3,7 @@
 //Pause game until input
 void pause()
 {
-    cout << endl <<  "Press any key to continue...";
+    cout << endl << endl <<  "  Press any key to continue...";
     _getch();
 }
 
@@ -36,54 +36,61 @@ void pickValue(int arr[], int &value, int size)
 //The three exercises
 void showFirstExerciseLevelOne()
 {
-    int result;
-    int arrMassValues[] = { 500, 300, 200, 100, 250, 20, 16, 12, 8, 4 };
-    int arrForceValues[] = { 1, 2, 4, 50, 200 };
+    int acceleration;
+    int forceValues[] = { 500, 300, 200, 600, 400 };
+    int massValues[] = { 1, 2, 4, 50, 100 };
     int mass, force;
 
-    pickValue(arrMassValues, mass, SIZE(arrMassValues));
-    pickValue(arrForceValues, force, SIZE(arrForceValues));
+    pickValue(massValues, mass, SIZE(massValues));
+    pickValue(forceValues, force, SIZE(forceValues));
 
-    cout << "A body with mass " << mass << " kg is acted upon by a force " << force << "N. What is its acceleration?" << endl;
+    cout << endl;
+    cout << "   A body with mass " << mass << " kg is acted upon by a force " << force << "N. What is its acceleration?" << endl;
+    cout << endl;
 
-    cin >> result;
+    cout << "   Enter your answer: ";
+    cin >> acceleration;
 
-    if (result == (mass - force))
+    if (acceleration == (force / mass))
     {
-        cout << "Correct!";
+        cout << "   Correct!";
     }
-    else if (result != (mass / force))
+    else
     {
-        cout << "Incorrect!";
+        cout << "   Incorrect!";
     }
 }
 
 void showSecondExerciseLevelOne()
 {
-    char answer;
+    char result;
 
-    cout << "Is it possible for a person who is on a moving-up escalator to remain at rest, relative to the earth's surface? (Y/N)" << endl;
+    cout << endl;
+    cout << "   Is it possible for a person who is on a moving-up escalator" << endl
+         << "   to remain at rest, relative to the earth's surface? (Y/N)" << endl;
+    cout << endl;
 
-    answer = _getch();
+    cout << "   Enter your answer: ";
+    result = _getch();
 
     while (true)
     {
-        cout << answer << endl;
+        cout << result << endl;
 
-        if (answer == 'N' or answer == 'n')
+        if (result == 'N' or result == 'n')
         {
-            cout << "Correct!";
+            cout << "   Correct!";
             break;
         }
-        else if (answer == 'Y' or answer == 'y')
+        else if (result == 'Y' or result == 'y')
         {
-            cout << "Incorrect!";
+            cout << "   Incorrect!";
             break;
         }
         else
         {
-            cout << "Incorrect Input. Expected Input: Y/N" << endl;
-            cin >> answer;
+            cout << "   Incorrect Input. Expected Input: Y/N" << endl;
+            cin >> result;
         }
     }
 }
@@ -94,25 +101,29 @@ void showThirdExerciseLevelOne()
     int weight;
     int weightSupplies;
 
-    int arrWeightValues[] = { 5000, 3000, 200, 100, 250, 20, 16, 12, 8, 4 };
-    int arrWeightSuppliesValues[] = { 1, 2, 4, 50, 200 };
+    int weightValues[] = { 1000, 810, 750, 600, 540 };
+    int weightSuppliesValues[] = { 500, 400, 200, 100 };
 
-    pickValue(arrWeightValues, weight,SIZE(arrWeightValues));
-    pickValue(arrWeightSuppliesValues, weightSupplies,SIZE(arrWeightSuppliesValues));
+    pickValue(weightValues, weight,SIZE(weightValues));
+    pickValue(weightSuppliesValues, weightSupplies,SIZE(weightSuppliesValues));
 
-    cout << "For the elevation of construction materials, on the upper end of an unfinished building" << endl;
-    cout << "is montaged a motionless spool. With it's help a worker with a weight of " << weight;
-    cout << "N lifts the " << weightSupplies << "N supplies up. What pressure does the ground he's standing on take?" << endl;
+    cout << endl;
+    cout << "   To elevate construction materials with a weight of " << weightSupplies << "N, "
+         << "a worker wit a weight of " << weight << "N "
+         << "montages a motionless spool." << endl;
+    cout << "   What pressure does the ground he's standing on take?" << endl;
+    cout << endl;
 
+    cout << "   Enter your answer: ";
     cin >> result;
 
     if (result == (weight - weightSupplies))
     {
-        cout << "Correct!";
+        cout << "   Correct!";
     }
-    else if(result != (weight - weightSupplies))
+    else
     {
-        cout << "Incorrect!";
+        cout << "   Incorrect!";
     }
 }
 

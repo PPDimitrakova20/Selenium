@@ -22,17 +22,16 @@ void showFirstExerciseLevelThree()
 )";
 
     // TODO: Make options selectable with _getch()
-    cout << "Enter your answer: ";
-
+    cout << "   Enter your answer: ";
     cin >> result;
 
     if (result == 'C' || result == 'c' || result == 'C)' || result == 'c)')
     {
-        cout << "Correct";
+        cout << "   Correct!";
     }
     else
     {
-        cout << "Incorrect";
+        cout << "   Incorrect!";
     }
 }
 
@@ -56,26 +55,25 @@ void showSecondExerciseLevelThree()
 
 )";
 
-    cout << "Enter your answer: ";
-
+    cout << "   Enter your answer: ";
     cin >> result;
 
     if (result == resistanceOne + resistanceTwo + resistanceThree)
     {
-        cout << "Correct";
+        cout << "   Correct!";
     }
     else
     {
-        cout << "Incorrect";
+        cout << "   Incorrect!";
     }
 }
 
 void showThirdExerciseLevelThree()
 {
     int voltages, amperes;
-    int voltagesValues[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+    int voltagesValues[] = { 2, 4, 6, 8, 10, 12 };
     int amperesValues[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
-    float result;
+    int result;
 
     pickValue(voltagesValues, voltages, SIZE(voltagesValues));
     pickValue(amperesValues, amperes, SIZE(amperesValues));
@@ -100,17 +98,16 @@ void showThirdExerciseLevelThree()
 
 )";
 
-    cout << "Enter your answer: ";
-
+    cout << "   Enter your answer: ";
     cin >> result;
 
     if (result == voltages / 2)
     {
-        cout << "Correct";
+        cout << "   Correct!";
     }
     else
     {
-        cout << "Incorrect";
+        cout << "   Incorrect!";
     }
 }
 
