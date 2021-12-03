@@ -6,41 +6,204 @@ string convertToString(float value)
 }
 
 void showFirstExerciseLevelTwo()
-{
-    srand((unsigned)time(NULL));
+{  
+    char firstWord[100];
+    int lengthForFirstWord;
+    char secondWord[100];
+    int lengthForSecondWord;
+    char thirdWord[100];
+    int lengthForThirdWord;
+    char forthWord[100];
+    int lengthForForthWord;
+    char fifthWord[100];
+    int lengthForFifthWord;
+    int check = 0;
+  
+    Table tableDefinitions; //Initialize table
 
-    //Initialize variables for user response
-    float result1; 
-    float result2;
-    float result3;
-
-    //Initialize array with values for the exercise
-    float weight[7] = { 10, 12, 24, 43, 70, 80, 96 };
-
-    //Initialize variables for random numbers values
-    int indexWeightOne = rand() % SIZE(weight);
-    int indexWeightTwo = rand() % SIZE(weight);
-    int indexWeightThree = rand() % SIZE(weight);
-
-    Table tableOne; //Initialize table
-
-    cout << "Complete the table" << endl;
+    cout << "Write down the correct word" << endl;
 
     // Set the table values
-    tableOne.add_row({ "P", "m", "g" });
-    tableOne.add_row({ convertToString(weight[indexWeightOne]), "...", "10" });
-    tableOne.add_row({ convertToString(weight[indexWeightTwo]), "..." , "10" });
-    tableOne.add_row({ convertToString(weight[indexWeightThree]), "..." , "10" });
+    tableDefinitions.add_row({ "Word", "Definition"});
+    tableDefinitions.add_row({  "...", "continuous physical force exerted on or against an object by something in contact with it" }); //pressure
+    tableDefinitions.add_row({  "..." , "the force that attracts a body towards the centre of the earth, or towards any other physical body having mass" }); //gravity
+    tableDefinitions.add_row({  "..." , "the rate of change of velocity per unit of time" }); //acceleration
+    tableDefinitions.add_row({ "..." , "the time rate at which an object is moving along a path" }); //speed
+    tableDefinitions.add_row({ "..." , "the rate and direction of an object's movement" }); //velocity
 
-    cout << tableOne << endl; // Print the table
+
+    cout << tableDefinitions << endl; // Print the table
     cout << endl;
-    cout << "Enter your answers: ";
-    cin >> result1 >> result2 >> result3; // User input
+    cout << "All of the answers are lower case." << endl << endl;
+    cout << "Enter your answer for the first word: ";
+    cin >> firstWord;
+    cin.getline(firstWord, 100, '\n');
+    lengthForFirstWord = strlen(firstWord);
+    for (int i = 0; i < lengthForFirstWord; i++)
+    {
+        if (firstWord[i] == 'p')
+        {
+            if (firstWord[i + 1] == 'r')
+            {
+                if (firstWord[i + 2] == 'e')
+                {
+                    if (firstWord[i + 3] == 's')
+                    {
+                        if (firstWord[i + 4] == 's')
+                        {
+                            if (firstWord[i + 5] == 'u')
+                            {
+                                if (firstWord[i + 6] == 'r')
+                                {
+                                    if (firstWord[i + 7] == 'e')
+                                    {
+                                        check++; 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    cout << "Enter your answer for the second word: ";
+    cin >> secondWord;
+    cin.getline(secondWord, 100, '\n');
+    lengthForSecondWord = strlen(secondWord);
+    for (int i = 0; i < lengthForSecondWord; i++)
+    {
+        if (secondWord[i] == 'g')
+        {
+            if (secondWord[i + 1] == 'r')
+            {
+                if (secondWord[i + 2] == 'a')
+                {
+                    if (secondWord[i + 3] == 'v')
+                    {
+                        if (secondWord[i + 4] == 'i')
+                        {
+                            if (secondWord[i + 5] == 't')
+                            {
+                                if (secondWord[i + 6] == 'y')
+                                {
+                                    check++;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    cout << "Enter your answer for the third word: ";
+    cin >> thirdWord;
+    cin.getline(thirdWord, 100, '\n');
+    lengthForThirdWord = strlen(thirdWord);
+    for (int i = 0; i < lengthForThirdWord; i++)
+    {
+        if (thirdWord[i] == 'a')
+        {
+            if (thirdWord[i + 1] == 'c')
+            {
+                if (thirdWord[i + 2] == 'c')
+                {
+                    if (thirdWord[i + 3] == 'e')
+                    {
+                        if (thirdWord[i + 4] == 'l')
+                        {
+                            if (thirdWord[i + 5] == 'e')
+                            {
+                                if (thirdWord[i + 6] == 'r')
+                                {
+                                    if (thirdWord[i + 7] == 'a')
+                                    {
+                                        if (thirdWord[i + 8] == 't')
+                                        {
+                                            if (thirdWord[i + 9] == 'i')
+                                            {
+                                                if (thirdWord[i + 10] == 'o')
+                                                {
+                                                    if (thirdWord[i + 11] == 'n')
+                                                    {
+                                                        check++;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    cout << "Enter your answer for the forth word: ";
+    cin >> forthWord;
+    cin.getline(forthWord, 100, '\n');
+    lengthForForthWord = strlen(forthWord);
+    for (int i = 0; i < lengthForForthWord; i++)
+    {
+        if (forthWord[i] == 's')
+        {
+            if (forthWord[i + 1] == 'p')
+            {
+                if (forthWord[i + 2] == 'e')
+                {
+                    if (forthWord[i + 3] == 'e')
+                    {
+                        if (forthWord[i + 4] == 'd')
+                        {
+                            check++;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    cout << "Enter your answer for the fifth word: ";
+    cin >> fifthWord;
+    cin.getline(fifthWord, 100, '\n');
+    lengthForFifthWord = strlen(fifthWord);
+    for (int i = 0; i < lengthForFifthWord; i++)
+    {
+        if (fifthWord[i] == 'v')
+        {
+            if (fifthWord[i + 1] == 'e')
+            {
+                if (fifthWord[i + 2] == 'l')
+                {
+                    if (fifthWord[i + 3] == 'o')
+                    {
+                        if (fifthWord[i + 4] == 'c')
+                        {
+                            if (fifthWord[i + 5] == 'i')
+                            {
+                                if (fifthWord[i + 6] == 't')
+                                {
+                                    if (fifthWord[i + 7] == 'y')
+                                    {
+                                        check++;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+   
 
     // Check if user's input is correct or incorrect
-    if (result1 == (weight[indexWeightOne] / 10) 
-        && result2 == (weight[indexWeightTwo] / 10) 
-        && result3 == (weight[indexWeightThree] / 10) )
+    if (check == 5) 
     {
         cout << "Correct!" << endl;
         
@@ -107,67 +270,11 @@ void showSecondExerciseLevelTwo()
     pause();
 }
 
-void showThirdExerciseLevelTwo()
-{
-    srand((unsigned)time(NULL));
-
-    //Initialize variables for user response
-    float firstResult;
-    float secondResult;
-    float thirdResult;
-
-    //Initialize array with values for the exercise
-    float pressure[3] = { 4, 8, 16 };
-    float strength[3] = { 8, 12, 16 };
-    float area[5] = { 1, 2, 4, 8, 16 };
-
-    //Initialize variables for random numbers values
-    int indexPressureOne = rand() % SIZE(pressure);
-    int indexPressureTwo = rand() % SIZE(pressure);
-
-    int indexStrengthOne = rand() % SIZE(strength);
-    int indexStrengthTwo = rand() % SIZE(strength);
-
-    int indexAreaOne = rand() % SIZE(area);
-    int indexAreaTwo = rand() % SIZE(area);
-
-
-
-    Table tableThree; //Initialize table
-
-    cout << "Complete the table" << endl;
-
-    // Set the table values
-    tableThree.add_row({ "p", "F", "S" });
-    tableThree.add_row({ "...", convertToString(strength[indexStrengthOne]), convertToString(area[indexAreaOne])});
-    tableThree.add_row({ convertToString(pressure[indexPressureTwo]), "...", convertToString(area[indexAreaTwo])});
-    tableThree.add_row({ convertToString(pressure[indexPressureOne]), convertToString(strength[indexStrengthTwo]), "..." });
-
-    cout << tableThree << endl; // Print the table
-    cout << endl;
-    cout << "Enter your answers: ";
-    cin >> firstResult >> secondResult >> thirdResult; // User input
-
-    // Check if user's input is correct or incorrect
-    if (firstResult == (strength[indexStrengthOne] / area[indexAreaOne]) 
-        && secondResult == (pressure[indexPressureTwo] * area[indexAreaTwo])
-        && thirdResult == (strength[indexStrengthTwo] / pressure[indexPressureOne]))
-    {
-        cout << "Correct!" << endl;
-    }
-    else
-    {
-        cout << "Incorrect!" << endl;
-    }
-    pause();
-}
 
 void displayExerciseLevelTwo()
 {
     showFirstExerciseLevelTwo();
     system("cls");
     showSecondExerciseLevelTwo();
-    system("cls");
-    showThirdExerciseLevelTwo();
     system("cls");
 }
