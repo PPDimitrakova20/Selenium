@@ -232,7 +232,7 @@ void showThirdExerciseLevelThree()
     
 
                     )" << voltages << R"( V
-                +---(V)----+
+                +----(V)---+
         )" << amperes << R"( A     |          |
     +---(A)-----+--|I--|I--+----(A2)---+
     |                                  |
