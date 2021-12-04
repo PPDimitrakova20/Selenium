@@ -14,7 +14,7 @@ bool showFirstExerciseLevelTwo()
     string acceleration;
     string speed;
     string velocity;
-    bool check;
+    
   
     Table tableDefinitions; //Initialize table
 
@@ -143,23 +143,24 @@ bool showSecondExerciseLevelTwo()
     int indexRoadOne = rand() % SIZE(road);
     int indexRoadTwo = rand() % SIZE(road);
 
-    Table tableTwo; //Initialize table
+    Table tableFillIn; //Initialize table
 
     cout << endl;
     cout << "   Complete the table" << endl;
     cout << endl;
 
     // Set the table values
-    tableTwo.add_row({ "A", "F", "s" });
-    tableTwo.add_row({ "...",convertToString(strength[indexStrengthOne]), convertToString(road[indexRoadOne])});
-    tableTwo.add_row({ convertToString(work[indexWorkOne ]), convertToString(strength[indexStrengthTwo]), "..."});
-    tableTwo.add_row({ convertToString(work[indexWorkTwo]), "...", convertToString(road[indexRoadTwo])});
+    tableFillIn.add_row({ "A", "F", "s" });
+    tableFillIn.add_row({ "...",convertToString(strength[indexStrengthOne]), convertToString(road[indexRoadOne])});
+    tableFillIn.add_row({ convertToString(work[indexWorkOne ]), convertToString(strength[indexStrengthTwo]), "..."});
+    tableFillIn.add_row({ convertToString(work[indexWorkTwo]), "...", convertToString(road[indexRoadTwo])});
 
-    cout << tableTwo << endl; // Print the table
+    cout << tableFillIn << endl; // Print the table
     cout << endl;
     cout << "   Enter your answers: ";
     cin >> resultOne >> resultTwo >> resultThree; // User input
 
+    //Check if user's input is the correct type
     if (!cin) {
         cout << endl;
         cout << "   Incorrect input!" << endl;
