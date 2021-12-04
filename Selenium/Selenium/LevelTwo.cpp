@@ -160,6 +160,15 @@ bool showSecondExerciseLevelTwo()
     cout << "   Enter your answers: ";
     cin >> resultOne >> resultTwo >> resultThree; // User input
 
+    if (!cin) {
+        cout << endl;
+        cout << "   Incorrect input!" << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << endl << "   Enter your answers: ";
+        cin >> resultOne >> resultTwo >> resultThree;
+    }
+
     // Check if user's input is correct or incorrect
     if (resultOne == (strength[indexStrengthOne] * road[indexRoadOne]) 
         && resultTwo == (work[indexWorkOne] / strength[indexStrengthTwo]) 
