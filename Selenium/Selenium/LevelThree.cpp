@@ -52,7 +52,7 @@ void printFirstExcerciseAnswers(string answers[3])
 
 void moveLeft(int &left)
 {
-    // This way we avoid the situation where it can go right forever
+    // This way we avoid the situation where it can go left forever
     if (left <= 0)
     {
         left = 2;
@@ -233,7 +233,7 @@ void showThirdExerciseLevelThree()
 {
     int voltages, amperes;
     int voltagesValues[] = { 2, 4, 6, 8, 10, 12 };
-    int amperesValues[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+    int amperesValues[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9};
     int result;
 
     pickValue(voltagesValues, voltages, SIZE(voltagesValues));
