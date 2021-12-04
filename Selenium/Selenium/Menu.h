@@ -12,3 +12,4 @@ using namespace std;
 
 void menu();
 void displayRules();
+int countCorrectAnswersLevelOne();

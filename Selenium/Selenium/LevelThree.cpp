@@ -279,7 +279,7 @@ bool showThirdExerciseLevelThree()
     }
 }
 
-void displayExerciseLevelThree()
+int displayExerciseLevelThree()
 {
     int correctAnswersLevelThree = 0;
 
@@ -314,9 +314,12 @@ void displayExerciseLevelThree()
 
     system("cls");
 
-    cout << "   Correct exercises: " << correctAnswersLevelThree;
+    cout << endl;
+    cout << "   Level 3 completed! Correct exercises: " << correctAnswersLevelThree << "/3";
 
     pause();
 
     system("cls");
+
+    return correctAnswersLevelThree;
 }

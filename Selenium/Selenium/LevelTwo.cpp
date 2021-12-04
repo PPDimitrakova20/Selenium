@@ -20,6 +20,7 @@ bool showFirstExerciseLevelTwo()
 
     cout << endl;
     cout << "   Write down the correct word" << endl;
+    cout << endl;
 
     // Set the table values
     tableDefinitions.add_row({ "Word", "Definition"});
@@ -103,7 +104,7 @@ bool showFirstExerciseLevelTwo()
     }
     else
     {
-        cout << "   Incorrect!" << endl << endl;        
+        cout << "   Incorrect!" << endl;        
     }
 
     if (correctAnswersFirstExerciseLevelTwo == 5)
@@ -146,6 +147,7 @@ bool showSecondExerciseLevelTwo()
 
     cout << endl;
     cout << "   Complete the table" << endl;
+    cout << endl;
 
     // Set the table values
     tableTwo.add_row({ "A", "F", "s" });
@@ -175,7 +177,7 @@ bool showSecondExerciseLevelTwo()
 }
 
 
-void displayExerciseLevelTwo()
+int displayExerciseLevelTwo()
 {
     int correctAnswersLevelTwo = 0;
 
@@ -191,9 +193,12 @@ void displayExerciseLevelTwo()
 
     system("cls");
 
-    cout << "   Correct exercises: " << correctAnswersLevelTwo;
+    cout << endl;
+    cout << "   Level 2 completed! Correct exercises: " << correctAnswersLevelTwo << "/2";
 
     pause();
 
     system("cls");
+
+    return correctAnswersLevelTwo;
 }

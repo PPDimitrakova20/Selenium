@@ -9,6 +9,6 @@
 
 using namespace std;
 
-void displayExerciseLevelOne();
+int displayExerciseLevelOne();
 void pickValue(int arr[], int &value, int size);
 void randomiseExercises(int randEx[]);

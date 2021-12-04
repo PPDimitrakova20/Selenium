@@ -16,6 +16,13 @@ void printLogo()
     cout << endl << endl;
 }
 
+void printEndScreen(int correctAnswers)
+{
+    cout << endl;
+    cout << "   Congratulations! You've got " << correctAnswers << "/8";
+    cout << endl;
+}
+
 // Menu outputs - the different options
 void firstOutput(string menu[3])
 {
@@ -36,9 +43,12 @@ void firstOutput(string menu[3])
 
 void game()
 {
-    displayExerciseLevelOne();
-    displayExerciseLevelTwo();
-    displayExerciseLevelThree();
+    int correctAnswers = 0;
+    correctAnswers += displayExerciseLevelOne();
+    correctAnswers += displayExerciseLevelTwo();
+    correctAnswers += displayExerciseLevelThree();
+
+    printEndScreen(correctAnswers);
 }
 
 // Menu output changes after the certain option is selected

@@ -133,7 +133,7 @@ bool showThirdExerciseLevelOne()
 }
 
 
-void displayExerciseLevelOne()
+int displayExerciseLevelOne()
 {
     int correctAnswersLevelOne = 0;
 
@@ -170,9 +170,12 @@ void displayExerciseLevelOne()
 
     system("cls");
 
-    cout << "   Correct exercises: " << correctAnswersLevelOne;
+    cout << endl;
+    cout << "   Level 1 completed! Correct exercises: " << correctAnswersLevelOne << "/3" << endl << endl;
 
     pause();
 
     system("cls");
+
+    return correctAnswersLevelOne;
 }
