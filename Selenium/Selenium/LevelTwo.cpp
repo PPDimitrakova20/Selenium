@@ -5,8 +5,10 @@ string convertToString(float value)
     return to_string(value).erase(2, 7);
 }
 
-void showFirstExerciseLevelTwo()
+bool showFirstExerciseLevelTwo()
 {  
+    int correctAnswersFirstExerciseLevelTwo = 0;
+
     string pressure;
     string gravity;
     string acceleration;
@@ -16,7 +18,8 @@ void showFirstExerciseLevelTwo()
   
     Table tableDefinitions; //Initialize table
 
-    cout << "Write down the correct word" << endl;
+    cout << endl;
+    cout << "   Write down the correct word" << endl;
 
     // Set the table values
     tableDefinitions.add_row({ "Word", "Definition"});
@@ -29,79 +32,93 @@ void showFirstExerciseLevelTwo()
 
     cout << tableDefinitions << endl; // Print the table
     cout << endl;
-    cout << "All of the answers are in lower case." << endl << endl;
-    cout << "Enter your answer for the first word: ";
+    cout << "   All of the answers are in lower case." << endl << endl;
+    cout << "   Enter your answer for the first word: ";
 
     //Check pressure
     cin >> pressure;
 
     if (pressure == "pressure")
     {
-        cout << "Correct!" << endl << endl;        
+        cout << "   Correct!" << endl << endl;     
+        correctAnswersFirstExerciseLevelTwo++;
     }
     else
     {
-        cout << "Incorrect!" << endl << endl;        
+        cout << "   Incorrect!" << endl << endl;        
     }
 
     //Check gravity
-    cout << "Enter your answer for the second word: ";
+    cout << "   Enter your answer for the second word: ";
 
     cin >> gravity;
     
     if (gravity == "gravity")
     {
-        cout << "Correct!" << endl << endl;       
+        cout << "   Correct!" << endl << endl;  
+        correctAnswersFirstExerciseLevelTwo++;
     }
     else
     {
-        cout << "Incorrect!" << endl << endl;        
+        cout << "   Incorrect!" << endl << endl;        
     }
 
     //Check acceleration
-    cout << "Enter your answer for the third word: ";
+    cout << "   Enter your answer for the third word: ";
 
     cin >> acceleration;
      
     if (acceleration == "acceleration")
     {
-        cout << "Correct!" << endl << endl;       
+        cout << "   Correct!" << endl << endl;  
+        correctAnswersFirstExerciseLevelTwo++;
     }
     else
     {
-        cout << "Incorrect!" << endl << endl;        
+        cout << "   Incorrect!" << endl << endl;        
     }
 
     //Check speed
-    cout << "Enter your answer for the forth word: ";
+    cout << "   Enter your answer for the forth word: ";
     cin >> speed;
 
     if (speed == "speed")
     {
-        cout << "Correct!" << endl << endl;        
+        cout << "   Correct!" << endl << endl; 
+        correctAnswersFirstExerciseLevelTwo++;
     }
     else
     {
-        cout << "Incorrect!" << endl << endl;        
+        cout << "   Incorrect!" << endl << endl;        
     }
 
     //Check velocity
-    cout << "Enter your answer for the fifth word: ";
+    cout << "   Enter your answer for the fifth word: ";
     cin >> velocity;
     
     if (velocity == "velocity")
     {
-        cout << "Correct!" << endl << endl;        
+        cout << "   Correct!" << endl << endl;
+        correctAnswersFirstExerciseLevelTwo++;
     }
     else
     {
-        cout << "Incorrect!" << endl << endl;        
+        cout << "   Incorrect!" << endl << endl;        
+    }
+
+    if (correctAnswersFirstExerciseLevelTwo == 5)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
     }
 
     pause();
 }
 
-void showSecondExerciseLevelTwo()
+bool showSecondExerciseLevelTwo()
 {
     srand((unsigned)time(NULL));
 
@@ -127,7 +144,8 @@ void showSecondExerciseLevelTwo()
 
     Table tableTwo; //Initialize table
 
-    cout << "Complete the table" << endl;
+    cout << endl;
+    cout << "   Complete the table" << endl;
 
     // Set the table values
     tableTwo.add_row({ "A", "F", "s" });
@@ -137,7 +155,7 @@ void showSecondExerciseLevelTwo()
 
     cout << tableTwo << endl; // Print the table
     cout << endl;
-    cout << "Enter your answers: ";
+    cout << "   Enter your answers: ";
     cin >> resultOne >> resultTwo >> resultThree; // User input
 
     // Check if user's input is correct or incorrect
@@ -145,11 +163,13 @@ void showSecondExerciseLevelTwo()
         && resultTwo == (work[indexWorkOne] / strength[indexStrengthTwo]) 
         && resultThree == (work[indexWorkTwo] / road[indexRoadTwo]))
     {
-        cout << "Correct!" << endl;
+        cout << "   Correct!" << endl;
+        return true;
     }
     else
     {
-        cout << "Incorrect!" << endl;
+        cout << "   Incorrect!" << endl;
+        return false;
     }
     pause();
 }
@@ -157,8 +177,23 @@ void showSecondExerciseLevelTwo()
 
 void displayExerciseLevelTwo()
 {
-    showFirstExerciseLevelTwo();
+    int correctAnswersLevelTwo = 0;
+
+    correctAnswersLevelTwo += showFirstExerciseLevelTwo();
+
+    pause();
+
     system("cls");
-    showSecondExerciseLevelTwo();
+
+    correctAnswersLevelTwo += showSecondExerciseLevelTwo();
+
+    pause();
+
+    system("cls");
+
+    cout << "   Correct exercises: " << correctAnswersLevelTwo;
+
+    pause();
+
     system("cls");
 }

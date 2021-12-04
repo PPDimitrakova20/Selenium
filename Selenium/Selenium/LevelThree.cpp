@@ -135,35 +135,38 @@ void selectFirstExcerciseAnswer(string answers[3], int indexAnswers)
     }
 }
 // If the user is on one of the options
-void answerPick(int selectedAnswer, bool &complete)
+bool answerPick(int selectedAnswer, bool &complete)
 {
     switch (selectedAnswer)
     {
         // A)
     case 0:
 
-        cout << "Incorrect!";
+        cout << "   Incorrect!";
         complete = 1;
+        return false;
         break;
 
         // B)
     case 1:
 
-        cout << "Incorrect!" << endl;
+        cout << "   Incorrect!" << endl;
         complete = 1;
+        return false;
         break;
 
         // C)
     case 2:
 
-        cout << "Correct!" << endl;
+        cout << "   Correct!" << endl;
         complete = 1;
+        return true;
         break;
     }
 }
 
 
-void showFirstExerciseLevelThree()
+bool showFirstExerciseLevelThree()
 {
     char result;
     string options[3] = { "A)", "B)", "C)" };
@@ -189,14 +192,13 @@ void showFirstExerciseLevelThree()
             }
             else
             {
-                //system("cls");
-                answerPick(optionsIndex, complete);
+               return answerPick(optionsIndex, complete);
             }
         }
     }
 }
 
-void showSecondExerciseLevelThree()
+bool showSecondExerciseLevelThree()
 {
     int resistanceOne, resistanceTwo, resistanceThree;
     int resistanceValues[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
@@ -222,14 +224,16 @@ void showSecondExerciseLevelThree()
     if (result == resistanceOne + resistanceTwo + resistanceThree)
     {
         cout << "   Correct!";
+        return true;
     }
     else
     {
         cout << "   Incorrect!";
+        return false;
     }
 }
 
-void showThirdExerciseLevelThree()
+bool showThirdExerciseLevelThree()
 {
     int voltages, amperes;
     int voltagesValues[] = { 2, 4, 6, 8, 10, 12 };
@@ -260,20 +264,25 @@ void showThirdExerciseLevelThree()
 )";
 
     cout << "   Enter your answer: ";
+    cin.ignore();
     cin >> result;
 
     if (result == voltages / 2)
     {
         cout << "   Correct!";
+        return true;
     }
     else
     {
         cout << "   Incorrect!";
+        return false;
     }
 }
 
 void displayExerciseLevelThree()
 {
+    int correctAnswersLevelThree = 0;
+
     int randEx[] = { 1, 2, 3 };
 
     randomiseExercises(randEx);
@@ -286,21 +295,28 @@ void displayExerciseLevelThree()
         {
         case 1:
 
-            showFirstExerciseLevelThree();
+            correctAnswersLevelThree += showFirstExerciseLevelThree();
             break;
 
         case 2:
 
-            showSecondExerciseLevelThree();
+            correctAnswersLevelThree += showSecondExerciseLevelThree();
             break;
 
         case 3:
 
-            showThirdExerciseLevelThree();
+            correctAnswersLevelThree += showThirdExerciseLevelThree();
             break;
         }
 
         pause();
-        system("cls");
     }
+
+    system("cls");
+
+    cout << "   Correct exercises: " << correctAnswersLevelThree;
+
+    pause();
+
+    system("cls");
 }

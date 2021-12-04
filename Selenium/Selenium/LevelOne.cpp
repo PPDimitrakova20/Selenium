@@ -10,7 +10,6 @@ void pause()
 //Randomising exercises
 void randomiseExercises(int randEx[])
 {
-    srand(unsigned(time(NULL)));
     system("cls");
 
     int temp;
@@ -35,7 +34,7 @@ void pickValue(int arr[], int &value, int size)
 }
 
 //The three exercises
-void showFirstExerciseLevelOne()
+bool showFirstExerciseLevelOne()
 {
     int acceleration;
     int forceValues[] = { 500, 300, 200, 600, 400 };
@@ -55,14 +54,16 @@ void showFirstExerciseLevelOne()
     if (acceleration == (force / mass))
     {
         cout << "   Correct!";
+        return true;
     }
     else
     {
         cout << "   Incorrect!";
+        return false;
     }
 }
 
-void showSecondExerciseLevelOne()
+bool showSecondExerciseLevelOne()
 {
     char result;
 
@@ -81,12 +82,12 @@ void showSecondExerciseLevelOne()
         if (result == 'N' or result == 'n')
         {
             cout << "   Correct!";
-            break;
+            return true;
         }
         else if (result == 'Y' or result == 'y')
         {
             cout << "   Incorrect!";
-            break;
+            return false;
         }
         else
         {
@@ -97,7 +98,7 @@ void showSecondExerciseLevelOne()
     }
 }
 
-void showThirdExerciseLevelOne()
+bool showThirdExerciseLevelOne()
 {
     int result;
     int weight;
@@ -122,16 +123,19 @@ void showThirdExerciseLevelOne()
     if (result == (weight - weightSupplies))
     {
         cout << "   Correct!";
+        return true;
     }
     else
     {
         cout << "   Incorrect!";
+        return false;
     }
 }
 
 
 void displayExerciseLevelOne()
 {
+    int correctAnswersLevelOne = 0;
 
     srand((unsigned)time(NULL));
 
@@ -147,22 +151,28 @@ void displayExerciseLevelOne()
         {
         case 1:
 
-            showFirstExerciseLevelOne();
+            correctAnswersLevelOne += showFirstExerciseLevelOne();
             break;
 
         case 2:
 
-            showSecondExerciseLevelOne();
+            correctAnswersLevelOne += showSecondExerciseLevelOne();
             break;
 
         case 3:
 
-            showThirdExerciseLevelOne();
+            correctAnswersLevelOne += showThirdExerciseLevelOne();
             break;
         }
-        
+
         pause();
     }
+
+    system("cls");
+
+    cout << "   Correct exercises: " << correctAnswersLevelOne;
+
+    pause();
 
     system("cls");
 }
