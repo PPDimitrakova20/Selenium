@@ -10,6 +10,7 @@ void pause()
 //Randomising exercises
 void randomiseExercises(int randEx[])
 {
+    srand(unsigned(time(NULL)));
     system("cls");
 
     int temp;
