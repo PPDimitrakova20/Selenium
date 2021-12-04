@@ -33,12 +33,19 @@ void printFirstExcerciseAnswers(string answers[3])
             }
             else
             {
-                cout << setw(10) << answers[i] << "<";
+                cout << setw(24) << answers[i] << "<";
             }
         }
         else
         {
-            cout << setw(10) << answers[i];
+            if (i == 0)
+            {
+                cout << setw(6) << answers[i];
+            }
+            else
+            {
+                cout << setw(24) << answers[i];
+            }
         }
     }
 }
@@ -110,12 +117,19 @@ void selectFirstExcerciseAnswer(string answers[3], int indexAnswers)
             }
             else
             {
-                cout << setw(9) << answers[indexAnswers] << "<";
+                cout << setw(24) << answers[indexAnswers] << "<";
             }
         }
         else
         {
-            cout << setw(10) << answers[i];
+            if (i == 0)
+            {
+                cout << setw(6) << answers[i];
+            }
+            else
+            {
+                cout << setw(24) << answers[i];
+            }
         }
 
     }
@@ -175,7 +189,7 @@ void showFirstExerciseLevelThree()
             }
             else
             {
-                system("cls");
+                //system("cls");
                 answerPick(optionsIndex, complete);
             }
         }
