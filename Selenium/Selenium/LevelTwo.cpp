@@ -12,6 +12,7 @@ void showFirstExerciseLevelTwo()
     string acceleration;
     string speed;
     string velocity;
+    bool check;
   
     Table tableDefinitions; //Initialize table
 
@@ -36,11 +37,11 @@ void showFirstExerciseLevelTwo()
 
     if (pressure == "pressure")
     {
-        cout << "Correct!" << endl << endl;
+        cout << "Correct!" << endl << endl;        
     }
     else
     {
-        cout << "Incorrect!" << endl << endl;
+        cout << "Incorrect!" << endl << endl;        
     }
 
     //Check gravity
@@ -50,11 +51,11 @@ void showFirstExerciseLevelTwo()
     
     if (gravity == "gravity")
     {
-        cout << "Correct!" << endl << endl;
+        cout << "Correct!" << endl << endl;       
     }
     else
     {
-        cout << "Incorrect!" << endl << endl;
+        cout << "Incorrect!" << endl << endl;        
     }
 
     //Check acceleration
@@ -64,11 +65,11 @@ void showFirstExerciseLevelTwo()
      
     if (acceleration == "acceleration")
     {
-        cout << "Correct!" << endl << endl;
+        cout << "Correct!" << endl << endl;       
     }
     else
     {
-        cout << "Incorrect!" << endl << endl;
+        cout << "Incorrect!" << endl << endl;        
     }
 
     //Check speed
@@ -77,11 +78,11 @@ void showFirstExerciseLevelTwo()
 
     if (speed == "speed")
     {
-        cout << "Correct!" << endl << endl;
+        cout << "Correct!" << endl << endl;        
     }
     else
     {
-        cout << "Incorrect!" << endl << endl;
+        cout << "Incorrect!" << endl << endl;        
     }
 
     //Check velocity
@@ -90,11 +91,11 @@ void showFirstExerciseLevelTwo()
     
     if (velocity == "velocity")
     {
-        cout << "Correct!" << endl << endl;
+        cout << "Correct!" << endl << endl;        
     }
     else
     {
-        cout << "Incorrect!" << endl << endl;
+        cout << "Incorrect!" << endl << endl;        
     }
 
     pause();
@@ -110,7 +111,7 @@ void showSecondExerciseLevelTwo()
     float resultThree;
 
     //Initialize array with values for the exercise
-    float work[] = { 9, 18, 36, 45};
+    float work[] = { 9, 18, 36, 54};
     float strength[] = { 1, 3, 6, 9, 18, 36 };
     float road[] = { 1, 3, 6, 9, 18, 36 };
 
