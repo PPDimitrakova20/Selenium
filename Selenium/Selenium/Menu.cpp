@@ -151,7 +151,8 @@ void optionPicker(int selectedOption, bool &play)
         // Exit
     case 2:
 
-        cout << "Thanks for playing!" << endl;
+        cout << endl;
+        cout << "   Thanks for playing!" << endl;
         play = true;
         break;
     }
