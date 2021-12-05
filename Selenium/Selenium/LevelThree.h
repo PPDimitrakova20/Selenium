@@ -9,7 +9,11 @@
 
 using namespace std;
 
+// Printing every exercise
 int displayExerciseLevelThree();
+// Pause game until input
 void pause();
+// Randomising values
 void pickValue(int arr[], int& value, int size);
+// Randomising every exercise
 void randomiseExercises(int randEx[]);

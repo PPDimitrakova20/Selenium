@@ -13,5 +13,7 @@
 using namespace tabulate;
 using namespace std;
 
+// Pause game until input
 void pause();
+// Printing every exercise
 int displayExerciseLevelTwo();

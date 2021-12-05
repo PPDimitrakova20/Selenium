@@ -1,5 +1,6 @@
 #include "LevelThree.h"
 
+// Printing the first excercise
 void printFirstExcerciseLevelThree()
 {
     cout << R"(
@@ -17,6 +18,7 @@ void printFirstExcerciseLevelThree()
 )";
 }
 
+// The first output
 void printFirstExcerciseAnswers(string answers[3])
 {
     int answersIndex = 0;
@@ -27,29 +29,16 @@ void printFirstExcerciseAnswers(string answers[3])
     {
         if (answersIndex == i)
         {
-            if (i == 0)
-            {
-                cout << setw(6) << answers[i] << "<";
-            }
-            else
-            {
-                cout << setw(24) << answers[i] << "<";
-            }
+            cout << setw(6) << answers[i] << "<";
         }
         else
         {
-            if (i == 0)
-            {
-                cout << setw(6) << answers[i];
-            }
-            else
-            {
-                cout << setw(24) << answers[i];
-            }
+            cout << setw(24) << answers[i];
         }
     }
 }
 
+// After the user presses A
 void moveLeft(int &left)
 {
     // This way we avoid the situation where it can go left forever
@@ -62,7 +51,7 @@ void moveLeft(int &left)
         --left;
     }
 }
-
+// After the user presses D
 void moveRight(int &right)
 {
     // This way we avoid the situation where it can go right forever
@@ -76,19 +65,20 @@ void moveRight(int &right)
     }
 }
 
+// Navigation system with A and D keys
 void navigateBetweenAnswers(int &navigationMechanics, bool &flag)
 {
     switch (_getch())
     {
 
-        // With A the user can go right
+        // With A the user can go left
     case 'A':
     case 'a':
 
         moveLeft(navigationMechanics);
         break;
 
-        // With D the user can go left
+        // With D the user can go right
     case 'D':
     case 'd':
 
@@ -103,6 +93,8 @@ void navigateBetweenAnswers(int &navigationMechanics, bool &flag)
 
     }
 }
+
+// If the user is on one of the options
 void selectFirstExcerciseAnswer(string answers[3], int indexAnswers)
 {
     printFirstExcerciseLevelThree();
@@ -134,9 +126,11 @@ void selectFirstExcerciseAnswer(string answers[3], int indexAnswers)
 
     }
 }
-// If the user is on one of the options
+
+// When the user picks one of the answers
 bool answerPick(int selectedAnswer, bool &complete)
 {
+    // Checking if the answer is correct
     switch (selectedAnswer)
     {
         // A)
@@ -165,7 +159,7 @@ bool answerPick(int selectedAnswer, bool &complete)
     }
 }
 
-
+// The three exercises
 bool showFirstExerciseLevelThree()
 {
     char result;
@@ -204,6 +198,7 @@ bool showSecondExerciseLevelThree()
     int resistanceValues[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
     int result;
 
+    // Randomising values
     pickValue(resistanceValues, resistanceOne, SIZE(resistanceValues));
     pickValue(resistanceValues, resistanceTwo, SIZE(resistanceValues));
     pickValue(resistanceValues, resistanceThree, SIZE(resistanceValues));
@@ -221,6 +216,7 @@ bool showSecondExerciseLevelThree()
     cout << "   Enter your answer: ";
     cin >> result;
 
+    // Checking if the answer is correct
     if (result == resistanceOne + resistanceTwo + resistanceThree)
     {
         cout << "   Correct!";
@@ -240,6 +236,7 @@ bool showThirdExerciseLevelThree()
     int amperesValues[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9};
     int result;
 
+    // Randomising values
     pickValue(voltagesValues, voltages, SIZE(voltagesValues));
     pickValue(amperesValues, amperes, SIZE(amperesValues));
 
@@ -267,6 +264,7 @@ bool showThirdExerciseLevelThree()
     cin.ignore();
     cin >> result;
 
+    // Checking if the answer is correct
     if (result == voltages / 2)
     {
         cout << "   Correct!";
@@ -278,9 +276,10 @@ bool showThirdExerciseLevelThree()
         return false;
     }
 }
-
+// Printing every exercise
 int displayExerciseLevelThree()
 {
+    // Counter for every correct answer
     int correctAnswersLevelThree = 0;
 
     int randEx[] = { 1, 2, 3 };
@@ -314,6 +313,7 @@ int displayExerciseLevelThree()
 
     system("cls");
 
+    // After the user finishes with level three their score will show up
     cout << endl;
     cout << "   Level 3 completed! Correct exercises: " << correctAnswersLevelThree << "/3";
 

@@ -4,4 +4,5 @@
 
 using namespace std;
 
+// Printing everything in Info
 void displayInfo();

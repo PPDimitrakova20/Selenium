@@ -1,6 +1,6 @@
 #include "Menu.h"
 
-//Output for the logo
+// Output for the logo
 void printLogo()
 {
     cout << R"(
@@ -16,6 +16,7 @@ void printLogo()
     cout << endl << endl;
 }
 
+// After completing the game
 void printEndScreen(int correctAnswers)
 {
     cout << endl;
@@ -41,9 +42,11 @@ void firstOutput(string menu[3])
     }
 }
 
+// All the levels in one fuction and the counter for each correct question
 void game()
 {
     int correctAnswers = 0;
+   
     correctAnswers += displayExerciseLevelOne();
     correctAnswers += displayExerciseLevelTwo();
     correctAnswers += displayExerciseLevelThree();
@@ -69,6 +72,7 @@ void menuSelectedOption(string menu[3], int indexMenu)
     }
 }
 
+// After the user presses W
 void movementUp(int &up)
 {
     // This way we avoid the situation where it can go up forever
@@ -82,6 +86,7 @@ void movementUp(int &up)
     }
 }
 
+// After the user presses S
 void movementDown(int &down)
 {
     // This way we avoid the situation where it can go down forever
@@ -157,6 +162,7 @@ void optionPicker(int selectedOption, bool &play)
     }
 }
 
+// Main function
 void menu()
 {
     // Declarations of the menu options
@@ -170,7 +176,7 @@ void menu()
 
     cout << endl << "    --------------------------------------------------------------------------------";
 
-    //With "play" the user can stop the game either with "Exit" or do all the tasks in "Play"
+    // With "play" the user can stop the game either with "Exit" or do all the tasks in "Play"
     bool play = false;
 
     while (!play)

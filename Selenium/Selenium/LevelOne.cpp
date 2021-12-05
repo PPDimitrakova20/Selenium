@@ -1,13 +1,13 @@
 #include "LevelOne.h"
 
-//Pause game until input
+// Pause game until input
 void pause()
 {
     cout << endl << endl <<  "  Press any key to continue...";
     _getch();
 }
 
-//Randomising exercises
+// Randomising exercises
 void randomiseExercises(int randEx[])
 {
     system("cls");
@@ -26,14 +26,14 @@ void randomiseExercises(int randEx[])
     }
 }
 
-//Randomising values
+// Randomising values
 void pickValue(int arr[], int &value, int size)
 {
     int index = rand() % size;
     value = arr[index];
 }
 
-//The three exercises
+// The three exercises
 bool showFirstExerciseLevelOne()
 {
     int acceleration;
@@ -41,6 +41,7 @@ bool showFirstExerciseLevelOne()
     int massValues[] = { 1, 2, 4, 50, 100 };
     int mass, force;
 
+    // Randomising the two values in excercise 1
     pickValue(massValues, mass, SIZE(massValues));
     pickValue(forceValues, force, SIZE(forceValues));
 
@@ -51,6 +52,7 @@ bool showFirstExerciseLevelOne()
     cout << "   Enter your answer: ";
     cin >> acceleration;
 
+    // Checking if the answer is correct
     if (acceleration == (force / mass))
     {
         cout << "   Correct!";
@@ -79,6 +81,7 @@ bool showSecondExerciseLevelOne()
     {
         cout << result << endl;
 
+        // Checking if the answer is correct
         if (result == 'N' or result == 'n')
         {
             cout << "   Correct!";
@@ -89,6 +92,7 @@ bool showSecondExerciseLevelOne()
             cout << "   Incorrect!";
             return false;
         }
+        // If the user accidentally answers with any other character
         else
         {
             cout << "   Incorrect Input. Expected Input: Y/N" << endl;
@@ -107,6 +111,7 @@ bool showThirdExerciseLevelOne()
     int weightValues[] = { 1000, 810, 750, 600, 540 };
     int weightSuppliesValues[] = { 500, 400, 200, 100 };
 
+    // Randomising the two values in excercise 3
     pickValue(weightValues, weight,SIZE(weightValues));
     pickValue(weightSuppliesValues, weightSupplies,SIZE(weightSuppliesValues));
 
@@ -120,6 +125,7 @@ bool showThirdExerciseLevelOne()
     cout << "   Enter your answer: ";
     cin >> result;
 
+    // Checking if the answer is correct
     if (result == (weight - weightSupplies))
     {
         cout << "   Correct!";
@@ -132,11 +138,13 @@ bool showThirdExerciseLevelOne()
     }
 }
 
-
+// Printing every exercise
 int displayExerciseLevelOne()
 {
+    // Counter for every correct answer
     int correctAnswersLevelOne = 0;
 
+    // Randomising the exercises
     srand((unsigned)time(NULL));
 
     int randEx[] = { 1, 2, 3 };
@@ -170,6 +178,7 @@ int displayExerciseLevelOne()
 
     system("cls");
 
+    // After the user finishes with level one their score will show up
     cout << endl;
     cout << "   Level 1 completed! Correct exercises: " << correctAnswersLevelOne << "/3" << endl << endl;
 

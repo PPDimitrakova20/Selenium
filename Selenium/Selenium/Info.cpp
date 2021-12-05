@@ -1,5 +1,6 @@
 #include "Info.h"
 
+// Small introduction to our game
 void printIntroduction()
 {
 	cout << R"(
@@ -11,6 +12,7 @@ void printIntroduction()
 )";
 }
 
+// Legend for level three
 void displayLegend()
 {
 	cout << R"(
@@ -40,6 +42,7 @@ void displayLegend()
 	cout << endl << endl;
 }
 
+// Printing everything in Info
 void displayInfo()
 {
 	printIntroduction();

@@ -10,6 +10,9 @@
 
 using namespace std;
 
+// Calling main fuction
 void menu();
+// Printing everything in Info
 void displayInfo();
+// Counter for LevelOne
 int countCorrectAnswersLevelOne();

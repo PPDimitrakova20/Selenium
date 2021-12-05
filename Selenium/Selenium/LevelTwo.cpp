@@ -5,6 +5,7 @@ string convertToString(float value)
     return to_string(value).erase(2, 7);
 }
 
+// The two excercises
 bool showFirstExerciseLevelTwo()
 {  
     int correctAnswersFirstExerciseLevelTwo = 0;
@@ -15,8 +16,8 @@ bool showFirstExerciseLevelTwo()
     string speed;
     string velocity;
     
-  
-    Table tableDefinitions; //Initialize table
+    // Initialize table
+    Table tableDefinitions;
 
     cout << endl;
     cout << "   Write down the correct word" << endl;
@@ -24,19 +25,24 @@ bool showFirstExerciseLevelTwo()
 
     // Set the table values
     tableDefinitions.add_row({ "Word", "Definition"});
-    tableDefinitions.add_row({  "...", "continuous physical force exerted on or against an object by something in contact with it" }); //pressure
-    tableDefinitions.add_row({  "..." , "the force that attracts a body towards the centre of the earth, or towards any other physical body having mass" }); //gravity
-    tableDefinitions.add_row({  "..." , "the rate of change of velocity per unit of time" }); //acceleration
-    tableDefinitions.add_row({ "..." , "the time rate at which an object is moving along a path" }); //speed
-    tableDefinitions.add_row({ "..." , "the rate and direction of an object's movement" }); //velocity
+    // pressure
+    tableDefinitions.add_row({  "...", "continuous physical force exerted on or against an object by something in contact with it" });
+    // gravity
+    tableDefinitions.add_row({  "..." , "the force that attracts a body towards the centre of the earth, or towards any other physical body having mass" }); 
+    // acceleration
+    tableDefinitions.add_row({  "..." , "the rate of change of velocity per unit of time" }); 
+    // speed
+    tableDefinitions.add_row({ "..." , "the time rate at which an object is moving along a path" });
+    // velocity
+    tableDefinitions.add_row({ "..." , "the rate and direction of an object's movement" }); 
 
-
-    cout << tableDefinitions << endl; // Print the table
+    // Print the table
+    cout << tableDefinitions << endl;
     cout << endl;
     cout << "   All of the answers are in lower case." << endl << endl;
     cout << "   Enter your answer for the first word: ";
 
-    //Check pressure
+    // Check pressure
     cin >> pressure;
 
     if (pressure == "pressure")
@@ -49,7 +55,7 @@ bool showFirstExerciseLevelTwo()
         cout << "   Incorrect!" << endl << endl;        
     }
 
-    //Check gravity
+    // Check gravity
     cout << "   Enter your answer for the second word: ";
 
     cin >> gravity;
@@ -64,7 +70,7 @@ bool showFirstExerciseLevelTwo()
         cout << "   Incorrect!" << endl << endl;        
     }
 
-    //Check acceleration
+    // Check acceleration
     cout << "   Enter your answer for the third word: ";
 
     cin >> acceleration;
@@ -79,7 +85,7 @@ bool showFirstExerciseLevelTwo()
         cout << "   Incorrect!" << endl << endl;        
     }
 
-    //Check speed
+    // Check speed
     cout << "   Enter your answer for the forth word: ";
     cin >> speed;
 
@@ -93,7 +99,7 @@ bool showFirstExerciseLevelTwo()
         cout << "   Incorrect!" << endl << endl;        
     }
 
-    //Check velocity
+    // Check velocity
     cout << "   Enter your answer for the fifth word: ";
     cin >> velocity;
     
@@ -123,17 +129,17 @@ bool showSecondExerciseLevelTwo()
 {
     srand((unsigned)time(NULL));
 
-    //Initialize variables for user response
+    // Initialize variables for user response
     float resultOne;
     float resultTwo; 
     float resultThree;
 
-    //Initialize array with values for the exercise
+    // Initialize array with values for the exercise
     float work[] = { 9, 18, 36, 54};
     float strength[] = { 1, 3, 6, 9, 18, 36 };
     float road[] = { 1, 3, 6, 9, 18, 36 };
 
-    //Initialize variables for random numbers values
+    // Initialize variables for random numbers values
     int indexWorkOne = rand() % SIZE(work);
     int indexWorkTwo = rand() % SIZE(work);
 
@@ -143,7 +149,8 @@ bool showSecondExerciseLevelTwo()
     int indexRoadOne = rand() % SIZE(road);
     int indexRoadTwo = rand() % SIZE(road);
 
-    Table tableFillIn; //Initialize table
+    // Initialize table
+    Table tableFillIn; 
 
     cout << endl;
     cout << "   Complete the table" << endl;
@@ -155,12 +162,15 @@ bool showSecondExerciseLevelTwo()
     tableFillIn.add_row({ convertToString(work[indexWorkOne ]), convertToString(strength[indexStrengthTwo]), "..."});
     tableFillIn.add_row({ convertToString(work[indexWorkTwo]), "...", convertToString(road[indexRoadTwo])});
 
-    cout << tableFillIn << endl; // Print the table
+    // Print the table
+    cout << tableFillIn << endl;
     cout << endl;
-    cout << "   Enter your answers: ";
-    cin >> resultOne >> resultTwo >> resultThree; // User input
 
-    //Check if user's input is the correct type
+    // User answers input
+    cout << "   Enter your answers: ";
+    cin >> resultOne >> resultTwo >> resultThree;
+
+    // Check if user's input is the correct type
     if (!cin) {
         cout << endl;
         cout << "   Incorrect input!" << endl;
@@ -170,7 +180,7 @@ bool showSecondExerciseLevelTwo()
         cin >> resultOne >> resultTwo >> resultThree;
     }
 
-    // Check if user's input is correct or incorrect
+    // Check if user's input is correct
     if (resultOne == (strength[indexStrengthOne] * road[indexRoadOne]) 
         && resultTwo == (work[indexWorkOne] / strength[indexStrengthTwo]) 
         && resultThree == (work[indexWorkTwo] / road[indexRoadTwo]))
@@ -186,9 +196,10 @@ bool showSecondExerciseLevelTwo()
     pause();
 }
 
-
+// Printing every exercise
 int displayExerciseLevelTwo()
 {
+    // Counter for every correct answer
     int correctAnswersLevelTwo = 0;
 
     correctAnswersLevelTwo += showFirstExerciseLevelTwo();
@@ -203,6 +214,7 @@ int displayExerciseLevelTwo()
 
     system("cls");
 
+    // After the user finishes with level two their score will show up
     cout << endl;
     cout << "   Level 2 completed! Correct exercises: " << correctAnswersLevelTwo << "/2";
 
