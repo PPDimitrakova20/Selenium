@@ -11,5 +11,5 @@
 using namespace std;
 
 void menu();
-void displayRules();
+void displayInfo();
 int countCorrectAnswersLevelOne();

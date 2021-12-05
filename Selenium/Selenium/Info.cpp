@@ -1,17 +1,19 @@
-#include "Rules.h"
+#include "Info.h"
 
 void printIntroduction()
 {
-	cout << endl << "			INTRODUCTION" << endl << endl
-	<< "		Hello, this is our game quiz about Physics. " << endl
-	<< "	There are 9 questions in three different categories. " << endl
-	<< "You can't go back and at the end you can see your result.";
+	cout << R"(
+		      INTRODUCTION
+
+	    Hello, this is our game quiz about Physics.
+	  There are 8 questions in three different categories.
+	You can't go back and at the end you can see your result.
+)";
 }
 
 void displayLegend()
 {
 	cout << R"(
-
 
 			LEGEND
 
@@ -38,8 +40,10 @@ void displayLegend()
 	cout << endl << endl;
 }
 
-void displayRules()
+void displayInfo()
 {
 	printIntroduction();
 	displayLegend();
+
+	cout << "       Press ESC to go back to the menu" << endl;
 }

@@ -30,7 +30,7 @@
     <ClCompile Include="LevelThree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Rules.cpp">
+    <ClCompile Include="Info.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,7 +47,7 @@
     <ClInclude Include="LevelThree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Rules.h">
+    <ClInclude Include="Info.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

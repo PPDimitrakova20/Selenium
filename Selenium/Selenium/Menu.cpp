@@ -141,11 +141,10 @@ void optionPicker(int selectedOption, bool &play)
         play = true;
         break;
 
-        // Rules
+        // Info
     case 1:
 
-        displayRules();
-        cout << "Press ESC to go back to the menu" << endl;
+        displayInfo();
         break;
 
         // Exit
@@ -161,7 +160,7 @@ void optionPicker(int selectedOption, bool &play)
 void menu()
 {
     // Declarations of the menu options
-    string menuOptions[3] = { "Play", "Rules", "Exit" };
+    string menuOptions[3] = { "Play", "Info", "Exit" };
     int menuOptionsIndex = 0;
     bool flag = 0;
 
