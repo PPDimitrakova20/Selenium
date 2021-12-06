@@ -55,7 +55,7 @@ git clone https://github.com/PPDimitrakova20/Selenium.git
 *You can view the presentation and documentations here:*
 
 - [QA Documentation](https://github.com/PPDimitrakova20/Selenium/raw/main/QA%20tests/Unit%20tests.xlsx)
-- [Documentation](https://ppdimitrakova20.github.io/Selenium/index.html)
+- [Documentation](https://github.com/PPDimitrakova20/Selenium-docs)
 - [Presentation](https://prezi.com/p/uxo2bunqm1he/selenium/)
 
 ## Acknowledgements <a name="acknowledgements"></a>
