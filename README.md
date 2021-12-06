@@ -41,7 +41,7 @@ git clone https://github.com/PPDimitrakova20/Selenium.git
   - [Tabulate](https://github.com/p-ranav/tabulate) - external library for creating the tables
 - [Doxygen](https://www.doxygen.nl/index.html) - Documentation
 - [Excel](https://www.microsoft.com/en-us/microsoft-365/excel) - QA Documentation
-- . . . - Presentation
+- [Prezi](https://prezi.com)- Presentation
 
 ## Authors <a name="authors"></a>
 *Everyone who has participated in making this project:*
@@ -52,10 +52,11 @@ git clone https://github.com/PPDimitrakova20/Selenium.git
 - [Petya Stoyanova](https://github.com/PGStoyanova20) - Backend Developer
 
 ## Presentation and Documentations <a name="documentations"></a>
-*You can download the presentation and documentations here:*
+*You can view the presentation and documentations here:*
 
 - [QA Documentation](https://github.com/PPDimitrakova20/Selenium/raw/main/QA%20tests/Unit%20tests.xlsx)
 - [Documentation](https://ppdimitrakova20.github.io/Selenium/index.html)
+- [Presentation](https://prezi.com/p/uxo2bunqm1he/selenium/)
 
 ## Acknowledgements <a name="acknowledgements"></a>
 *These are the resources we found helpful:*
