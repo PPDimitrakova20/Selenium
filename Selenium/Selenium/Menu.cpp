@@ -27,8 +27,8 @@ void printLogo()
 void printEndScreen(int correctAnswers)
 {
     cout << endl;
-    cout << "   Congratulations! You've got " << correctAnswers << "/8";
-    cout << endl;
+    cout << "   Congratulations! You've got " << correctAnswers << "/8" << endl;
+    pause();
 }
 
 /**
