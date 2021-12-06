@@ -17,7 +17,9 @@ This is a game quiz about Physics. There are 8 questions in three different cate
 
 ## Getting started<a name="gettingStarted"></a>
 These instructions will get you a copy of the project up and running on your local machine.
-
+#### Get a release
+Download the latest release from the releases page.
+#### Compile from source
 - Prerequisites
 ```
 Visual Studio with C++ development installed.
@@ -37,7 +39,7 @@ git clone https://github.com/PPDimitrakova20/Selenium.git
 - [Visual Studio](https://visualstudio.microsoft.com) - Application
   - [C++](https://isocpp.org/) - language used to create the applicatiom
   - [Tabulate](https://github.com/p-ranav/tabulate) - external library for creating the tables
-- [Word](https://www.microsoft.com/en-us/microsoft-365/word) - Documentation
+- [Doxygen](https://www.doxygen.nl/index.html) - Documentation
 - [Excel](https://www.microsoft.com/en-us/microsoft-365/excel) - QA Documentation
 - . . . - Presentation
 
@@ -53,6 +55,7 @@ git clone https://github.com/PPDimitrakova20/Selenium.git
 *You can download the presentation and documentations here:*
 
 - [QA Documentation](https://github.com/PPDimitrakova20/Selenium/raw/main/QA%20tests/Unit%20tests.xlsx)
+- [Documentation](https://ppdimitrakova20.github.io/Selenium/index.html)
 
 ## Acknowledgements <a name="acknowledgements"></a>
 *These are the resources we found helpful:*
