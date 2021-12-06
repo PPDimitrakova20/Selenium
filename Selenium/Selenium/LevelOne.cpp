@@ -1,13 +1,20 @@
 #include "LevelOne.h"
 
-// Pause game until input
+/**
+ * .Pauses the game
+ * 
+ */
 void pause()
 {
     cout << endl << endl <<  "  Press any key to continue...";
     _getch();
 }
 
-// Randomising exercises
+/**
+ * .Randomises the exercises in LevelOne.cpp
+ * 
+ * \param randEx array of exercises
+ */
 void randomiseExercises(int randEx[])
 {
     system("cls");
@@ -26,14 +33,25 @@ void randomiseExercises(int randEx[])
     }
 }
 
-// Randomising values
+/**
+ * .Randomises values
+ * 
+ * \param arr array of values
+ * \param value chosen value
+ * \param size size of array
+ */
 void pickValue(int arr[], int &value, int size)
 {
     int index = rand() % size;
     value = arr[index];
 }
 
-// The three exercises
+
+/**
+ * .Displays first exercise in LevelOne
+ * 
+ * \return true if correct otherwise false
+ */
 bool showFirstExerciseLevelOne()
 {
     int acceleration;
@@ -65,6 +83,11 @@ bool showFirstExerciseLevelOne()
     }
 }
 
+/**
+ * .Displays second exercise in LevelOne
+ *
+ * \return true if correct otherwise false
+ */
 bool showSecondExerciseLevelOne()
 {
     char result;
@@ -102,6 +125,11 @@ bool showSecondExerciseLevelOne()
     }
 }
 
+/**
+ * .Displays third exercise in LevelOne
+ *
+ * \return true if correct otherwise false
+ */
 bool showThirdExerciseLevelOne()
 {
     int result;
@@ -138,7 +166,11 @@ bool showThirdExerciseLevelOne()
     }
 }
 
-// Printing every exercise
+/**
+ * .Displays all exercises in LevelOne
+ * 
+ * \return returns number of correct answers
+ */
 int displayExerciseLevelOne()
 {
     // Counter for every correct answer

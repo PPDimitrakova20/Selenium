@@ -1,6 +1,10 @@
 #include "LevelThree.h"
 
-// Printing the first excercise
+/**
+ * .Displays first exercise in LevelThree
+ *
+ * \return true if correct otherwise false
+ */
 void printFirstExcerciseLevelThree()
 {
     cout << R"(
@@ -18,7 +22,11 @@ void printFirstExcerciseLevelThree()
 )";
 }
 
-// The first output
+/**
+ * .Displays first output of first exercise answers
+ * 
+ * \param answers array of answers
+ */
 void printFirstExcerciseAnswers(string answers[3])
 {
     int answersIndex = 0;
@@ -38,7 +46,11 @@ void printFirstExcerciseAnswers(string answers[3])
     }
 }
 
-// After the user presses A
+/**
+ * .Moves the answer left
+ * 
+ * \param left index of answer
+ */
 void moveLeft(int &left)
 {
     // This way we avoid the situation where it can go left forever
@@ -51,7 +63,12 @@ void moveLeft(int &left)
         --left;
     }
 }
-// After the user presses D
+
+/**
+ * .Moves the answer right
+ * 
+ * \param right index of answer
+ */
 void moveRight(int &right)
 {
     // This way we avoid the situation where it can go right forever
@@ -65,7 +82,12 @@ void moveRight(int &right)
     }
 }
 
-// Navigation system with A and D keys
+/**
+ * .Handles input
+ * 
+ * \param navigationMechanics index of answer
+ * \param flag shows if Enter is pressed
+ */
 void navigateBetweenAnswers(int &navigationMechanics, bool &flag)
 {
     switch (_getch())
@@ -94,7 +116,12 @@ void navigateBetweenAnswers(int &navigationMechanics, bool &flag)
     }
 }
 
-// If the user is on one of the options
+/**
+ * .Prints "<" after chosen answer
+ * 
+ * \param answers array of answers
+ * \param indexAnswers index of answers
+ */
 void selectFirstExcerciseAnswer(string answers[3], int indexAnswers)
 {
     printFirstExcerciseLevelThree();
@@ -127,7 +154,13 @@ void selectFirstExcerciseAnswer(string answers[3], int indexAnswers)
     }
 }
 
-// When the user picks one of the answers
+/**
+ * .Checks if answer is correct
+ * 
+ * \param selectedAnswer index of chosen asnwer
+ * \param complete shows if option is chosen
+ * \return true if answer is correct otherwise false
+ */
 bool answerPick(int selectedAnswer, bool &complete)
 {
     // Checking if the answer is correct
@@ -159,7 +192,11 @@ bool answerPick(int selectedAnswer, bool &complete)
     }
 }
 
-// The three exercises
+/**
+ * .Displays first exercise in LevelThree
+ * 
+ * \return chosen answer
+ */
 bool showFirstExerciseLevelThree()
 {
     char result;
@@ -192,6 +229,11 @@ bool showFirstExerciseLevelThree()
     }
 }
 
+/**
+ * .Displays second exercise in LevelThree
+ *
+ * \return true if correct otherwise false
+ */
 bool showSecondExerciseLevelThree()
 {
     int resistanceOne, resistanceTwo, resistanceThree;
@@ -229,6 +271,11 @@ bool showSecondExerciseLevelThree()
     }
 }
 
+/**
+ * .Displays third exercise in LevelThree
+ *
+ * \return true if correct otherwise false
+ */
 bool showThirdExerciseLevelThree()
 {
     int voltages, amperes;
@@ -276,7 +323,12 @@ bool showThirdExerciseLevelThree()
         return false;
     }
 }
-// Printing every exercise
+
+/**
+ * .Displays all exercises in LevelThree
+ *
+ * \return returns number of correct answers
+ */
 int displayExerciseLevelThree()
 {
     // Counter for every correct answer

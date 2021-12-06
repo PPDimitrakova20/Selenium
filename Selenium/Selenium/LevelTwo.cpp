@@ -1,11 +1,21 @@
 ﻿#include "LevelTwo.h"
 
+/**
+ * .Converts float variable to string
+ * 
+ * \param value float variable
+ * \return string variable
+ */
 string convertToString(float value)
 {
     return to_string(value).erase(2, 7);
 }
 
-// The two excercises
+/**
+ * .Displays first exercise in LevelTwo
+ *
+ * \return true if correct otherwise false
+ */
 bool showFirstExerciseLevelTwo()
 {  
     int correctAnswersFirstExerciseLevelTwo = 0;
@@ -125,6 +135,11 @@ bool showFirstExerciseLevelTwo()
     pause();
 }
 
+/**
+ * .Displays second exercise in LevelTwo
+ *
+ * \return true if correct otherwise false
+ */
 bool showSecondExerciseLevelTwo()
 {
     srand((unsigned)time(NULL));
@@ -196,7 +211,11 @@ bool showSecondExerciseLevelTwo()
     pause();
 }
 
-// Printing every exercise
+/**
+ * .Displays all exercises in LevelTwo
+ *
+ * \return returns number of correct answers
+ */
 int displayExerciseLevelTwo()
 {
     // Counter for every correct answer

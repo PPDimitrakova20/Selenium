@@ -1,6 +1,9 @@
 #include "Menu.h"
 
-// Output for the logo
+/**
+ * .Prints logo
+ * 
+ */
 void printLogo()
 {
     cout << R"(
@@ -16,7 +19,11 @@ void printLogo()
     cout << endl << endl;
 }
 
-// After completing the game
+/**
+ * .Prints EndScreen
+ * 
+ * \param correctAnswers number of correct answers
+ */
 void printEndScreen(int correctAnswers)
 {
     cout << endl;
@@ -24,7 +31,11 @@ void printEndScreen(int correctAnswers)
     cout << endl;
 }
 
-// Menu outputs - the different options
+/**
+ * .Displays first output
+ * 
+ * \param menu array of menu options
+ */
 void firstOutput(string menu[3])
 {
     int menuIndex = 0;
@@ -42,7 +53,10 @@ void firstOutput(string menu[3])
     }
 }
 
-// All the levels in one fuction and the counter for each correct question
+/**
+ * .Displays every level
+ * 
+ */
 void game()
 {
     int correctAnswers = 0;
@@ -54,7 +68,12 @@ void game()
     printEndScreen(correctAnswers);
 }
 
-// Menu output changes after the certain option is selected
+/**
+ * .Prints ">" before and "<" after chosen answer
+ * 
+ * \param menu array of menu options
+ * \param indexMenu index for options
+ */
 void menuSelectedOption(string menu[3], int indexMenu)
 {
 
@@ -72,7 +91,11 @@ void menuSelectedOption(string menu[3], int indexMenu)
     }
 }
 
-// After the user presses W
+/**
+ * .Moves the option up
+ * 
+ * \param up index of option
+ */
 void movementUp(int &up)
 {
     // This way we avoid the situation where it can go up forever
@@ -86,7 +109,11 @@ void movementUp(int &up)
     }
 }
 
-// After the user presses S
+/**
+ * .Moves the option down
+ *
+ * \param down index of option
+ */
 void movementDown(int &down)
 {
     // This way we avoid the situation where it can go down forever
@@ -100,7 +127,12 @@ void movementDown(int &down)
     }
 }
 
-// Navigation system with W and S keys
+/**
+ * .Handles input
+ * 
+ * \param navigationMechanics index of option
+ * \param flag shows if Enter or Escape is pressed
+ */
 void navigationSystem(int &navigationMechanics, bool &flag)
 {
     switch (_getch())
@@ -134,7 +166,12 @@ void navigationSystem(int &navigationMechanics, bool &flag)
     }
 }
 
-// If the user is on one of the options
+/**
+ * .Prints user input
+ * 
+ * \param selectedOption index of option
+ * \param play shows if game is finished
+ */
 void optionPicker(int selectedOption, bool &play)
 {
     switch (selectedOption)
@@ -162,7 +199,10 @@ void optionPicker(int selectedOption, bool &play)
     }
 }
 
-// Main function
+/**
+ * .Prints menu
+ * 
+ */
 void menu()
 {
     // Declarations of the menu options

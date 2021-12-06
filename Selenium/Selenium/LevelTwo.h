@@ -6,7 +6,9 @@
 #include <iomanip>
 #include <string>
 
-//Macro to find size of array
+/**
+ * .Finds size of array
+ */
 #define SIZE(x) (sizeof(x)/sizeof(x[0]))
 
 //Namespace from tabulate.hpp
